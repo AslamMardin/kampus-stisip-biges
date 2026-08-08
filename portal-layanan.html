@@ -175,26 +175,26 @@
 </head>
 <body class="bg-background text-on-surface font-body-md min-h-screen flex flex-col pt-[72px]">
     <!-- TopNavBar (Shared Component) -->
-    <header class="bg-primary dark:bg-primary-container text-secondary dark:text-secondary-fixed shadow-sm dark:shadow-none docked full-width top-0 fixed w-full z-50 flex flex-col items-center px-gutter max-w-container-max mx-auto left-0 right-0">
-        <div class="w-full flex justify-between items-center h-[72px]">
+    <header class="shadow-md docked full-width top-0 fixed w-full z-50 flex flex-col items-center px-gutter max-w-container-max mx-auto left-0 right-0 h-[78px] justify-center" style="background: linear-gradient(135deg, rgba(0, 21, 50, 0.94), rgba(0, 10, 30, 0.97)), url('img/header.jpeg'); background-size: cover; background-position: center; border-bottom: 2px solid #785a1a;">
+        <div class="w-full max-w-container-max flex justify-between items-center h-[72px]">
             <!-- Brand -->
-            <a href="index.html" class="flex items-center gap-4 hover:opacity-90 transition-opacity">
-                <img class="h-10 w-10 object-contain rounded-full bg-white p-1" data-alt="A distinguished university crest or logo for STISIP BIKES. The crest features classic academic symbols such as a book, a torch, or a shield, rendered in deep navy and rich gold tones. The design is elegant, authoritative, and suitable for a prestigious academic institution." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAc30psDp8UXkhV7zMwtreyuGgPt4Z4X8FSwf_xTz7MLnyfIY2Y4raJt_Bk-0pMcTKRhV9dd4j8PL-xdJfo_UI3VI3QErcKx61AkEb0n4S8UWEVq2N9-zUVBr07qB81UwqZOBzx2ds06A-HBiXjNlpwEk5X1BjXzo3ZmvDDBMK3QZnQzaiN3b2dW03aTb5DgsVZ5sVnGKpXC0PQCJSEAjPPHejbgNnCxdfhDawY5nK-JAo0KI2t4G0"/>
-                <span class="font-display-lg text-[20px] md:text-[24px] font-bold text-on-primary dark:text-on-primary-fixed">STISIP BIKES</span>
+            <a href="index.html" class="flex items-center gap-3 hover:opacity-90 transition-opacity">
+                <img alt="Logo STISIP Bina Generasi Polewali" class="h-12 w-auto object-contain" src="img/LOGO STISIP.png"/>
+                <div class="flex flex-col">
+                    <span class="font-display-lg text-[18px] md:text-[20px] font-bold text-on-primary tracking-tight leading-tight">STISIP Bina Generasi</span>
+                    <span class="text-[11px] text-secondary font-semibold tracking-wider uppercase">Polewali Mandar</span>
+                </div>
             </a>
             <!-- Navigation Links (Web) -->
-            <div class="hidden md:flex gap-8">
-                <a class="font-label-md text-label-md text-on-primary dark:text-on-primary-container hover:text-secondary-fixed hover:bg-primary-container dark:hover:bg-surface-variant transition-colors duration-200 px-3 py-2 rounded-DEFAULT" href="profil.html">Profile</a>
-                <a class="font-label-md text-label-md text-on-primary dark:text-on-primary-container hover:text-secondary-fixed hover:bg-primary-container dark:hover:bg-surface-variant transition-colors duration-200 px-3 py-2 rounded-DEFAULT" href="program-studi.html">Program Studi</a>
-                <a class="font-label-md text-label-md text-on-primary dark:text-on-primary-container hover:text-secondary-fixed hover:bg-primary-container dark:hover:bg-surface-variant transition-colors duration-200 px-3 py-2 rounded-DEFAULT" href="pmb.html">PMB</a>
-                <a class="font-label-md text-label-md text-secondary dark:text-secondary-fixed border-b-2 border-secondary pb-1 hover:bg-primary-container dark:hover:bg-surface-variant transition-colors duration-200 px-3 py-2 rounded-DEFAULT" href="portal-layanan.html">Portal Layanan</a>
+            <div class="hidden md:flex items-center gap-7">
+                <a class="font-label-md text-label-md text-on-primary hover:text-secondary transition-colors duration-200" href="profil.html">Profil Kampus</a>
+                <a class="font-label-md text-label-md text-on-primary hover:text-secondary transition-colors duration-200" href="program-studi.html">Program Studi</a>
+                <a class="font-label-md text-label-md text-on-primary hover:text-secondary transition-colors duration-200" href="pmb.html">PMB 2026/2027</a>
+                <a class="font-label-md text-label-md text-secondary border-b-2 border-secondary pb-1" href="portal-layanan.html">Portal Layanan</a>
             </div>
             <!-- Actions -->
             <div class="flex items-center gap-4">
-                <button class="material-symbols-outlined text-on-primary hover:text-secondary transition-colors" data-icon="library_books">library_books</button>
-                <button class="material-symbols-outlined text-on-primary hover:text-secondary transition-colors" data-icon="account_balance">account_balance</button>
-                <a class="hidden lg:inline-flex bg-primary border border-primary text-on-primary hover:bg-primary-container px-4 py-2 rounded-DEFAULT font-label-md text-label-md transition-colors flex items-center justify-center h-[38px]" href="#">Login</a>
-                <a class="bg-secondary text-primary hover:bg-secondary-fixed-dim px-4 py-2 rounded-DEFAULT font-label-md text-label-md font-bold transition-colors flex items-center justify-center h-[38px]" href="pmb.html">Apply Now</a>
+                <a href="pmb.html" class="hidden md:flex items-center justify-center h-10 px-5 rounded font-label-md text-label-md bg-secondary text-primary hover:bg-secondary-fixed-dim transition-colors font-bold shadow-md">Daftar PMB Online</a>
                 <!-- Mobile Menu Toggle -->
                 <button id="mobile-menu-toggle" aria-label="Menu" class="md:hidden text-on-primary p-2 focus:outline-none">
                     <span class="material-symbols-outlined text-2xl">menu</span>
@@ -206,27 +206,27 @@
     <!-- Mobile Navigation Drawer -->
     <div id="mobile-menu" class="fixed inset-0 z-50 translate-x-full transition-transform duration-300 ease-in-out md:hidden" aria-hidden="true">
         <!-- Overlay -->
-        <div id="mobile-menu-overlay" class="absolute inset-0 bg-primary/60 backdrop-blur-sm"></div>
+        <div id="mobile-menu-overlay" class="absolute inset-0 bg-primary/80 backdrop-blur-sm"></div>
         <!-- Drawer Content -->
-        <div class="absolute right-0 top-0 bottom-0 w-64 bg-primary dark:bg-primary-container text-on-primary p-6 flex flex-col gap-6 shadow-xl z-10">
-            <div class="flex items-center justify-between">
-                <span class="font-display-lg text-[20px] font-bold text-on-primary tracking-tight">Menu</span>
+        <div class="absolute right-0 top-0 bottom-0 w-72 bg-primary text-on-primary p-6 flex flex-col gap-6 shadow-xl z-10" style="background: linear-gradient(180deg, #001026 0%, #000a1e 100%);">
+            <div class="flex items-center justify-between border-b border-on-primary/10 pb-4">
+                <div class="flex items-center gap-2">
+                    <img alt="Logo STISIP" class="h-8 w-auto" src="img/LOGO STISIP.png"/>
+                    <span class="font-display-lg text-[16px] font-bold text-on-primary">STISIP Bina Generasi</span>
+                </div>
                 <button id="mobile-menu-close" aria-label="Close Menu" class="text-on-primary p-1 rounded-full hover:bg-primary-container">
                     <span class="material-symbols-outlined">close</span>
                 </button>
             </div>
-            <nav class="flex flex-col gap-4 mt-4">
-                <a class="font-label-md text-label-md py-2 border-b border-on-primary/10 transition-colors hover:text-secondary" href="profil.html">Profile</a>
+            <nav class="flex flex-col gap-4 mt-2">
+                <a class="font-label-md text-label-md py-2 border-b border-on-primary/10 transition-colors hover:text-secondary" href="profil.html">Profil Kampus</a>
                 <a class="font-label-md text-label-md py-2 border-b border-on-primary/10 transition-colors hover:text-secondary" href="program-studi.html">Program Studi</a>
-                <a class="font-label-md text-label-md py-2 border-b border-on-primary/10 transition-colors hover:text-secondary" href="pmb.html">PMB</a>
-                <a class="font-label-md text-label-md py-2 border-b border-on-primary/10 transition-colors text-secondary" href="portal-layanan.html">Portal Layanan</a>
+                <a class="font-label-md text-label-md py-2 border-b border-on-primary/10 transition-colors hover:text-secondary" href="pmb.html">PMB Online</a>
+                <a class="font-label-md text-label-md py-2 border-b border-on-primary/10 transition-colors text-secondary font-bold" href="portal-layanan.html">Portal Layanan</a>
             </nav>
             <div class="mt-auto flex flex-col gap-4">
-                <button class="w-full font-label-md text-label-md bg-transparent border border-on-primary text-on-primary py-3 rounded hover:bg-primary-container">
-                    Login
-                </button>
-                <a href="pmb.html" class="w-full font-label-md text-label-md bg-secondary text-primary py-3 rounded font-bold hover:bg-secondary-fixed-dim transition-colors text-center">
-                    Apply Now
+                <a href="pmb.html" class="w-full font-label-md text-label-md bg-secondary text-primary py-3 rounded font-bold hover:bg-secondary-fixed-dim transition-colors text-center shadow-md">
+                    Daftar PMB Sekarang
                 </a>
             </div>
         </div>
@@ -331,25 +331,28 @@
     </main>
 
     <!-- Footer (Shared Component) -->
-    <footer class="bg-primary dark:bg-surface-container-highest text-secondary dark:text-secondary-fixed-dim full-width bottom-0 border-t border-outline-variant mt-20">
-        <div class="w-full py-section-padding-desktop px-gutter flex flex-col md:flex-row justify-between items-start max-w-container-max mx-auto gap-8">
-            <!-- Brand & Copyright -->
+    <footer class="bg-primary text-on-primary w-full py-section-padding-desktop px-gutter max-w-container-max mx-auto border-t border-outline-variant full-width bottom-0 mt-20" style="background: linear-gradient(180deg, #001026 0%, #000817 100%);">
+        <div class="flex flex-col md:flex-row justify-between items-start gap-8">
             <div class="flex flex-col gap-4 max-w-sm">
-                <span class="font-headline-md text-headline-md font-bold text-on-primary">STISIP BIKES</span>
-                <p class="font-body-md text-body-md text-on-primary dark:text-on-surface-variant">© 2024 STISIP BIKES. All Rights Reserved. Sanctuary of Academic Excellence.</p>
+                <div class="flex items-center gap-3">
+                    <img alt="Logo STISIP Bina Generasi Polewali" class="h-12 w-auto object-contain" src="img/LOGO STISIP.png"/>
+                    <span class="font-display-lg text-[22px] font-bold text-on-primary leading-tight">STISIP Bina Generasi</span>
+                </div>
+                <p class="font-body-md text-body-md text-on-primary/80">
+                    Sekolah Tinggi Ilmu Sosial dan Ilmu Politik (STISIP) Bina Generasi Polewali Mandar, Sulawesi Barat.
+                </p>
             </div>
-            <!-- Links -->
             <div class="flex flex-col md:flex-row gap-8 md:gap-16">
-                <div class="flex flex-col gap-3">
-                    <a class="font-label-md text-label-md text-on-primary dark:text-on-surface-variant hover:text-secondary dark:hover:text-primary transition-colors opacity-80 hover:opacity-100 transition-opacity" href="#">Privacy Policy</a>
-                    <a class="font-label-md text-label-md text-on-primary dark:text-on-surface-variant hover:text-secondary dark:hover:text-primary transition-colors opacity-80 hover:opacity-100 transition-opacity" href="#">Campus Map</a>
-                    <a class="font-label-md text-label-md text-on-primary dark:text-on-surface-variant hover:text-secondary dark:hover:text-primary transition-colors opacity-80 hover:opacity-100 transition-opacity" href="#">Directory</a>
-                </div>
-                <div class="flex flex-col gap-3">
-                    <a class="font-label-md text-label-md text-on-primary dark:text-on-surface-variant hover:text-secondary dark:hover:text-primary transition-colors opacity-80 hover:opacity-100 transition-opacity" href="#">Career Center</a>
-                    <a class="font-label-md text-label-md text-on-primary dark:text-on-surface-variant hover:text-secondary dark:hover:text-primary transition-colors opacity-80 hover:opacity-100 transition-opacity" href="#">Alumni</a>
-                </div>
+                <nav class="flex flex-col gap-3">
+                    <a class="font-label-md text-label-md text-on-primary/80 hover:text-white transition-colors" href="index.html">Beranda</a>
+                    <a class="font-label-md text-label-md text-on-primary/80 hover:text-white transition-colors" href="profil.html">Profil Kampus</a>
+                    <a class="font-label-md text-label-md text-on-primary/80 hover:text-white transition-colors" href="program-studi.html">Program Studi</a>
+                    <a class="font-label-md text-label-md text-on-primary/80 hover:text-white transition-colors" href="pmb.html">PMB Online</a>
+                </nav>
             </div>
+        </div>
+        <div class="w-full mt-12 pt-8 border-t border-on-primary/10 text-center text-on-primary/60 font-caption text-caption">
+            © 2026 STISIP Bina Generasi Polewali. Seluruh Hak Cipta Dilindungi.
         </div>
     </footer>
     <script src="assets/js/main.js"></script>
