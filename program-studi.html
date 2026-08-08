@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Program Studi - STISIP BIKES</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container": "#edeeef",
+                      "on-tertiary-fixed-variant": "#8f0f07",
+                      "secondary-container": "#fed488",
+                      "surface-tint": "#465f88",
+                      "surface-container-low": "#f3f4f5",
+                      "inverse-on-surface": "#f0f1f2",
+                      "error": "#ba1a1a",
+                      "on-tertiary-fixed": "#410000",
+                      "surface-variant": "#e1e3e4",
+                      "on-primary-fixed": "#001b3d",
+                      "on-secondary": "#ffffff",
+                      "tertiary-container": "#4c0000",
+                      "tertiary": "#200000",
+                      "error-container": "#ffdad6",
+                      "primary-container": "#002147",
+                      "on-primary": "#ffffff",
+                      "surface-container-high": "#e7e8e9",
+                      "tertiary-fixed": "#ffdad4",
+                      "tertiary-fixed-dim": "#ffb4a8",
+                      "outline": "#74777f",
+                      "surface-container-highest": "#e1e3e4",
+                      "on-tertiary-container": "#ed5542",
+                      "on-primary-fixed-variant": "#2d476f",
+                      "surface-bright": "#f8f9fa",
+                      "surface-container-lowest": "#ffffff",
+                      "on-error": "#ffffff",
+                      "surface-dim": "#d9dadb",
+                      "secondary": "#775a19",
+                      "on-background": "#191c1d",
+                      "on-secondary-container": "#785a1a",
+                      "on-primary-container": "#708ab5",
+                      "surface": "#f8f9fa",
+                      "on-secondary-fixed": "#261900",
+                      "inverse-surface": "#2e3132",
+                      "on-surface-variant": "#44474e",
+                      "secondary-fixed": "#ffdea5",
+                      "primary-fixed-dim": "#aec7f6",
+                      "secondary-fixed-dim": "#e9c176",
+                      "background": "#f8f9fa",
+                      "on-tertiary": "#ffffff",
+                      "primary-fixed": "#d6e3ff",
+                      "on-surface": "#191c1d",
+                      "on-secondary-fixed-variant": "#5d4201",
+                      "inverse-primary": "#aec7f6",
+                      "outline-variant": "#c4c6cf",
+                      "on-error-container": "#93000a",
+                      "primary": "#000a1e"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "container-max": "1280px",
+                      "section-padding-desktop": "80px",
+                      "base": "8px",
+                      "section-padding-mobile": "40px"
+              },
+              "fontFamily": {
+                      "display-lg": [
+                              "Merriweather"
+                      ],
+                      "display-lg-mobile": [
+                              "Merriweather"
+                      ],
+                      "label-md": [
+                              "Inter"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "caption": [
+                              "Inter"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "headline-sm": [
+                              "Merriweather"
+                      ],
+                      "headline-md": [
+                              "Merriweather"
+                      ]
+              },
+              "fontSize": {
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "display-lg-mobile": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "caption": [
+                              "12px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-sm": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+            },
+          },
+        }
+      </script>
+</head>
+<body class="bg-background text-on-background font-body-md text-body-md antialiased pt-[72px]">
+    <!-- TopNavBar -->
+    <header class="fixed top-0 w-full z-50 flex flex-col items-center px-gutter max-w-container-max mx-auto bg-primary dark:bg-primary-container shadow-sm dark:shadow-none docked full-width left-0 right-0">
+        <div class="w-full flex items-center justify-between h-[72px]">
+            <!-- Brand -->
+            <a href="index.html" class="flex items-center gap-4 hover:opacity-90 transition-opacity">
+                <img alt="University Crest" class="w-10 h-10 object-contain" data-alt="A distinguished university crest featuring a stylized book and rising sun, rendered in gold and navy blue, suitable for a formal academic institution like STISIP BIKES." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAiJz34eP25TzeRNY9ECFMQlKl-AQHf7HX1QHNe0xjjv9oJVESlpVr8d1kpdZRzjLTvCCvrowXR86B9ITEobDE_NZzDvQ4b8Y9YE2dJ3FseeOf66G67NXCtH18sfdiPaCVrXkEdnCN3X1tVdlICNUSnlsF982Wi4qrrSMcxn4rteJNFuWpx7p1MzUS2SqpNGxiVWZFXsuQxfO4-o37GkSKWMgXaK8YZBUPdzSXphN2jlcRyrSPdW0"/>
+                <span class="font-display-lg text-[20px] md:text-[24px] font-bold text-on-primary dark:text-on-primary-fixed">STISIP BIKES</span>
+            </a>
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex items-center gap-8">
+                <a class="text-on-primary dark:text-on-primary-container hover:text-secondary-fixed hover:bg-primary-container dark:hover:bg-surface-variant transition-colors duration-200 px-3 py-2 rounded-DEFAULT font-label-md text-label-md" href="profil.html">Profile</a>
+                <a class="text-secondary dark:text-secondary-fixed border-b-2 border-secondary pb-1 px-3 py-2 font-label-md text-label-md" href="program-studi.html">Program Studi</a>
+                <a class="text-on-primary dark:text-on-primary-container hover:text-secondary-fixed hover:bg-primary-container dark:hover:bg-surface-variant transition-colors duration-200 px-3 py-2 rounded-DEFAULT font-label-md text-label-md" href="pmb.html">PMB</a>
+                <a class="text-on-primary dark:text-on-primary-container hover:text-secondary-fixed hover:bg-primary-container dark:hover:bg-surface-variant transition-colors duration-200 px-3 py-2 rounded-DEFAULT font-label-md text-label-md" href="portal-layanan.html">Portal Layanan</a>
+            </div>
+            <!-- Actions -->
+            <div class="hidden md:flex items-center gap-4">
+                <button class="text-on-primary hover:text-secondary-fixed transition-colors">
+                    <span class="material-symbols-outlined">library_books</span>
+                </button>
+                <button class="text-on-primary hover:text-secondary-fixed transition-colors">
+                    <span class="material-symbols-outlined">account_balance</span>
+                </button>
+                <button class="bg-primary border border-on-primary text-on-primary px-4 py-2 rounded-DEFAULT font-label-md text-label-md hover:bg-primary-container transition-colors">Login</button>
+                <a href="pmb.html" class="bg-secondary text-primary px-4 py-2 rounded-DEFAULT font-label-md text-label-md font-bold hover:bg-secondary-fixed-dim transition-colors flex items-center justify-center">Apply Now</a>
+            </div>
+            <!-- Mobile Menu Toggle -->
+            <button id="mobile-menu-toggle" aria-label="Menu" class="md:hidden text-on-primary p-2 focus:outline-none">
+                <span class="material-symbols-outlined text-2xl">menu</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="fixed inset-0 z-50 translate-x-full transition-transform duration-300 ease-in-out md:hidden" aria-hidden="true">
+        <!-- Overlay -->
+        <div id="mobile-menu-overlay" class="absolute inset-0 bg-primary/60 backdrop-blur-sm"></div>
+        <!-- Drawer Content -->
+        <div class="absolute right-0 top-0 bottom-0 w-64 bg-primary dark:bg-primary-container text-on-primary p-6 flex flex-col gap-6 shadow-xl z-10">
+            <div class="flex items-center justify-between">
+                <span class="font-display-lg text-[20px] font-bold text-on-primary tracking-tight">Menu</span>
+                <button id="mobile-menu-close" aria-label="Close Menu" class="text-on-primary p-1 rounded-full hover:bg-primary-container">
+                    <span class="material-symbols-outlined">close</span>
+                </button>
+            </div>
+            <nav class="flex flex-col gap-4 mt-4">
+                <a class="font-label-md text-label-md py-2 border-b border-on-primary/10 transition-colors hover:text-secondary" href="profil.html">Profile</a>
+                <a class="font-label-md text-label-md py-2 border-b border-on-primary/10 transition-colors text-secondary" href="program-studi.html">Program Studi</a>
+                <a class="font-label-md text-label-md py-2 border-b border-on-primary/10 transition-colors hover:text-secondary" href="pmb.html">PMB</a>
+                <a class="font-label-md text-label-md py-2 border-b border-on-primary/10 transition-colors hover:text-secondary" href="portal-layanan.html">Portal Layanan</a>
+            </nav>
+            <div class="mt-auto flex flex-col gap-4">
+                <button class="w-full font-label-md text-label-md bg-transparent border border-on-primary text-on-primary py-3 rounded hover:bg-primary-container">
+                    Login
+                </button>
+                <a href="pmb.html" class="w-full font-label-md text-label-md bg-secondary text-primary py-3 rounded font-bold hover:bg-secondary-fixed-dim transition-colors text-center">
+                    Apply Now
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="relative w-full h-[400px] md:h-[500px] flex items-center justify-center bg-primary overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-center opacity-60" data-alt="A wide angle, high-resolution photograph of a prestigious university campus building at dusk, featuring classic architecture with tall columns. A dark navy gradient overlay at 40 percent opacity ensures text legibility over the image. The mood is academic, established, and inspiring." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAq2IqPMgu8pRCV_3uH5vfiZoI_-wnAvHS_8cGrBSgYHQcM34Lr99Pr9wbvBrT6W2zgEAfbGT09TG38I-_CmJYISEf1PVtyNk1Iri8jh2YLlUCiPFzF99c-Q3Ri9ilrZsuDSvy6VXG5Gy94dnd8KYKIYjWL8m-BmFFvtbK6SgzyZ0qVZD_5KV0A9GGD_FxE_4rOnwZt88rJITsgj8ph-QkBLx2_1Rrqeh7rljA7-tlX8Hu6ev0KT-U')"></div>
+        <div class="relative z-10 text-center px-gutter max-w-3xl">
+            <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-primary mb-4">Program Studi</h1>
+            <p class="font-body-lg text-body-lg text-on-primary opacity-90">Temukan jalur akademis yang sesuai dengan minat dan tujuan karir Anda di STISIP BIKES. Kami menawarkan program sarjana dan pascasarjana yang dirancang untuk mencetak pemimpin masa depan.</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="py-section-padding-mobile md:py-section-padding-desktop px-gutter max-w-container-max mx-auto">
+        <!-- Filter Bar -->
+        <section class="mb-12 flex flex-col md:flex-row justify-between items-center gap-4 bg-surface-container p-4 rounded-xl border border-outline-variant">
+            <div class="relative w-full md:w-1/3">
+                <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">search</span>
+                <input class="w-full pl-10 pr-4 py-2 bg-surface border border-outline-variant rounded-DEFAULT focus:border-secondary focus:ring-1 focus:ring-secondary font-body-md text-body-md text-on-surface" placeholder="Cari program studi..." type="text"/>
+            </div>
+            <div class="flex gap-2 w-full md:w-auto overflow-x-auto pb-2 md:pb-0">
+                <button class="whitespace-nowrap px-4 py-2 bg-secondary text-on-secondary rounded-DEFAULT font-label-md text-label-md font-bold">Semua</button>
+                <button class="whitespace-nowrap px-4 py-2 bg-surface text-on-surface border border-outline-variant rounded-DEFAULT font-label-md text-label-md hover:bg-surface-container-high transition-colors">Sarjana (S1)</button>
+                <button class="whitespace-nowrap px-4 py-2 bg-surface text-on-surface border border-outline-variant rounded-DEFAULT font-label-md text-label-md hover:bg-surface-container-high transition-colors">Pascasarjana (S2)</button>
+            </div>
+        </section>
+
+        <!-- Programs Grid -->
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Card 1 -->
+            <article class="bg-surface border border-outline-variant rounded-lg p-6 hover:shadow-md transition-shadow duration-300 flex flex-col h-full">
+                <div class="flex justify-between items-start mb-4">
+                    <span class="material-symbols-outlined text-4xl text-surface-tint">public</span>
+                    <span class="px-2 py-1 bg-secondary-container text-on-secondary-container rounded-DEFAULT font-caption text-caption font-bold">Akreditasi A</span>
+                </div>
+                <h2 class="font-headline-sm text-headline-sm text-on-surface mb-2">Ilmu Pemerintahan</h2>
+                <p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">Mempelajari dinamika politik, kebijakan publik, dan tata kelola pemerintahan yang baik. Lulusan dipersiapkan menjadi analis kebijakan dan aparatur sipil negara.</p>
+                <a class="inline-flex items-center gap-2 text-secondary font-label-md text-label-md hover:opacity-80 transition-opacity" href="#">
+                    Pelajari Lebih Lanjut
+                    <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                </a>
+            </article>
+            <!-- Card 2 -->
+            <article class="bg-surface border border-outline-variant rounded-lg p-6 hover:shadow-md transition-shadow duration-300 flex flex-col h-full">
+                <div class="flex justify-between items-start mb-4">
+                    <span class="material-symbols-outlined text-4xl text-surface-tint">group</span>
+                    <span class="px-2 py-1 bg-secondary-container text-on-secondary-container rounded-DEFAULT font-caption text-caption font-bold">Akreditasi B</span>
+                </div>
+                <h2 class="font-headline-sm text-headline-sm text-on-surface mb-2">Ilmu Administrasi Negara</h2>
+                <p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">Fokus pada manajemen organisasi sektor publik, reformasi birokrasi, dan pelayanan publik. Cocok untuk calon administrator publik profesional.</p>
+                <a class="inline-flex items-center gap-2 text-secondary font-label-md text-label-md hover:opacity-80 transition-opacity" href="#">
+                    Pelajari Lebih Lanjut
+                    <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                </a>
+            </article>
+            <!-- Card 3 -->
+            <article class="bg-surface border border-outline-variant rounded-lg p-6 hover:shadow-md transition-shadow duration-300 flex flex-col h-full">
+                <div class="flex justify-between items-start mb-4">
+                    <span class="material-symbols-outlined text-4xl text-surface-tint">business_center</span>
+                    <span class="px-2 py-1 bg-surface-container-high text-on-surface-variant rounded-DEFAULT font-caption text-caption">Akreditasi B</span>
+                </div>
+                <h2 class="font-headline-sm text-headline-sm text-on-surface mb-2">Ilmu Administrasi Bisnis</h2>
+                <p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">Membekali mahasiswa dengan keahlian manajerial, kewirausahaan, dan strategi bisnis di era digital. Membentuk entrepreneur dan profesional korporat.</p>
+                <a class="inline-flex items-center gap-2 text-secondary font-label-md text-label-md hover:opacity-80 transition-opacity" href="#">
+                    Pelajari Lebih Lanjut
+                    <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                </a>
+            </article>
+            <!-- Card 4 (S2) -->
+            <article class="bg-surface border border-outline-variant rounded-lg p-6 hover:shadow-md transition-shadow duration-300 flex flex-col h-full border-t-4 border-t-primary">
+                <div class="flex justify-between items-start mb-4">
+                    <span class="material-symbols-outlined text-4xl text-primary">school</span>
+                    <div class="flex flex-col items-end gap-1">
+                        <span class="px-2 py-1 bg-primary text-on-primary rounded-DEFAULT font-caption text-caption">Magister (S2)</span>
+                        <span class="px-2 py-1 bg-secondary-container text-on-secondary-container rounded-DEFAULT font-caption text-caption font-bold">Akreditasi B</span>
+                    </div>
+                </div>
+                <h2 class="font-headline-sm text-headline-sm text-on-surface mb-2">Magister Administrasi Publik</h2>
+                <p class="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">Program lanjutan untuk pendalaman teori dan praktik administrasi publik, analisis kebijakan strategis, dan kepemimpinan sektor publik.</p>
+                <a class="inline-flex items-center gap-2 text-secondary font-label-md text-label-md hover:opacity-80 transition-opacity" href="#">
+                    Pelajari Lebih Lanjut
+                    <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                </a>
+            </article>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full py-section-padding-mobile md:py-section-padding-desktop px-gutter flex flex-col md:flex-row justify-between items-start max-w-container-max mx-auto bg-primary dark:bg-surface-container-highest border-t border-outline-variant full-width bottom-0 mt-20">
+        <div class="mb-8 md:mb-0">
+            <span class="font-headline-md text-headline-md font-bold text-on-primary block mb-4">STISIP BIKES</span>
+            <p class="text-secondary dark:text-secondary-fixed-dim font-body-md text-body-md max-w-xs">© 2024 STISIP BIKES. All Rights Reserved. Sanctuary of Academic Excellence.</p>
+        </div>
+        <div class="flex flex-wrap gap-8">
+            <div class="flex flex-col gap-2">
+                <a class="text-on-primary dark:text-on-surface-variant hover:text-secondary dark:hover:text-primary transition-colors opacity-80 hover:opacity-100 font-label-md text-label-md" href="#">Privacy Policy</a>
+                <a class="text-on-primary dark:text-on-surface-variant hover:text-secondary dark:hover:text-primary transition-colors opacity-80 hover:opacity-100 font-label-md text-label-md" href="#">Campus Map</a>
+            </div>
+            <div class="flex flex-col gap-2">
+                <a class="text-on-primary dark:text-on-surface-variant hover:text-secondary dark:hover:text-primary transition-colors opacity-80 hover:opacity-100 font-label-md text-label-md" href="#">Directory</a>
+                <a class="text-on-primary dark:text-on-surface-variant hover:text-secondary dark:hover:text-primary transition-colors opacity-80 hover:opacity-100 font-label-md text-label-md" href="#">Career Center</a>
+            </div>
+            <div class="flex flex-col gap-2">
+                <a class="text-on-primary dark:text-on-surface-variant hover:text-secondary dark:hover:text-primary transition-colors opacity-80 hover:opacity-100 font-label-md text-label-md" href="#">Alumni</a>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

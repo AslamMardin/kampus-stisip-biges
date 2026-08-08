@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Portal Layanan - STISIP BIKES</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container": "#edeeef",
+                      "on-tertiary-fixed-variant": "#8f0f07",
+                      "secondary-container": "#fed488",
+                      "surface-tint": "#465f88",
+                      "surface-container-low": "#f3f4f5",
+                      "inverse-on-surface": "#f0f1f2",
+                      "error": "#ba1a1a",
+                      "on-tertiary-fixed": "#410000",
+                      "surface-variant": "#e1e3e4",
+                      "on-primary-fixed": "#001b3d",
+                      "on-secondary": "#ffffff",
+                      "tertiary-container": "#4c0000",
+                      "tertiary": "#200000",
+                      "error-container": "#ffdad6",
+                      "primary-container": "#002147",
+                      "on-primary": "#ffffff",
+                      "surface-container-high": "#e7e8e9",
+                      "tertiary-fixed": "#ffdad4",
+                      "tertiary-fixed-dim": "#ffb4a8",
+                      "outline": "#74777f",
+                      "surface-container-highest": "#e1e3e4",
+                      "on-tertiary-container": "#ed5542",
+                      "on-primary-fixed-variant": "#2d476f",
+                      "surface-bright": "#f8f9fa",
+                      "surface-container-lowest": "#ffffff",
+                      "on-error": "#ffffff",
+                      "surface-dim": "#d9dadb",
+                      "secondary": "#775a19",
+                      "on-background": "#191c1d",
+                      "on-secondary-container": "#785a1a",
+                      "on-primary-container": "#708ab5",
+                      "surface": "#f8f9fa",
+                      "on-secondary-fixed": "#261900",
+                      "inverse-surface": "#2e3132",
+                      "on-surface-variant": "#44474e",
+                      "secondary-fixed": "#ffdea5",
+                      "primary-fixed-dim": "#aec7f6",
+                      "secondary-fixed-dim": "#e9c176",
+                      "background": "#f8f9fa",
+                      "on-tertiary": "#ffffff",
+                      "primary-fixed": "#d6e3ff",
+                      "on-surface": "#191c1d",
+                      "on-secondary-fixed-variant": "#5d4201",
+                      "inverse-primary": "#aec7f6",
+                      "outline-variant": "#c4c6cf",
+                      "on-error-container": "#93000a",
+                      "primary": "#000a1e"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "container-max": "1280px",
+                      "section-padding-desktop": "80px",
+                      "base": "8px",
+                      "section-padding-mobile": "40px"
+              },
+              "fontFamily": {
+                      "display-lg": [
+                              "Merriweather"
+                      ],
+                      "display-lg-mobile": [
+                              "Merriweather"
+                      ],
+                      "label-md": [
+                              "Inter"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "caption": [
+                              "Inter"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "headline-sm": [
+                              "Merriweather"
+                      ],
+                      "headline-md": [
+                              "Merriweather"
+                      ]
+              },
+              "fontSize": {
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "display-lg-mobile": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "caption": [
+                              "12px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-sm": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+            },
+          },
+        }
+      </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined[data-weight="fill"] {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md min-h-screen flex flex-col pt-[72px]">
+    <!-- TopNavBar (Shared Component) -->
+    <header class="bg-primary dark:bg-primary-container text-secondary dark:text-secondary-fixed shadow-sm dark:shadow-none docked full-width top-0 fixed w-full z-50 flex flex-col items-center px-gutter max-w-container-max mx-auto left-0 right-0">
+        <div class="w-full flex justify-between items-center h-[72px]">
+            <!-- Brand -->
+            <a href="index.html" class="flex items-center gap-4 hover:opacity-90 transition-opacity">
+                <img class="h-10 w-10 object-contain rounded-full bg-white p-1" data-alt="A distinguished university crest or logo for STISIP BIKES. The crest features classic academic symbols such as a book, a torch, or a shield, rendered in deep navy and rich gold tones. The design is elegant, authoritative, and suitable for a prestigious academic institution." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAc30psDp8UXkhV7zMwtreyuGgPt4Z4X8FSwf_xTz7MLnyfIY2Y4raJt_Bk-0pMcTKRhV9dd4j8PL-xdJfo_UI3VI3QErcKx61AkEb0n4S8UWEVq2N9-zUVBr07qB81UwqZOBzx2ds06A-HBiXjNlpwEk5X1BjXzo3ZmvDDBMK3QZnQzaiN3b2dW03aTb5DgsVZ5sVnGKpXC0PQCJSEAjPPHejbgNnCxdfhDawY5nK-JAo0KI2t4G0"/>
+                <span class="font-display-lg text-[20px] md:text-[24px] font-bold text-on-primary dark:text-on-primary-fixed">STISIP BIKES</span>
+            </a>
+            <!-- Navigation Links (Web) -->
+            <div class="hidden md:flex gap-8">
+                <a class="font-label-md text-label-md text-on-primary dark:text-on-primary-container hover:text-secondary-fixed hover:bg-primary-container dark:hover:bg-surface-variant transition-colors duration-200 px-3 py-2 rounded-DEFAULT" href="profil.html">Profile</a>
+                <a class="font-label-md text-label-md text-on-primary dark:text-on-primary-container hover:text-secondary-fixed hover:bg-primary-container dark:hover:bg-surface-variant transition-colors duration-200 px-3 py-2 rounded-DEFAULT" href="program-studi.html">Program Studi</a>
+                <a class="font-label-md text-label-md text-on-primary dark:text-on-primary-container hover:text-secondary-fixed hover:bg-primary-container dark:hover:bg-surface-variant transition-colors duration-200 px-3 py-2 rounded-DEFAULT" href="pmb.html">PMB</a>
+                <a class="font-label-md text-label-md text-secondary dark:text-secondary-fixed border-b-2 border-secondary pb-1 hover:bg-primary-container dark:hover:bg-surface-variant transition-colors duration-200 px-3 py-2 rounded-DEFAULT" href="portal-layanan.html">Portal Layanan</a>
+            </div>
+            <!-- Actions -->
+            <div class="flex items-center gap-4">
+                <button class="material-symbols-outlined text-on-primary hover:text-secondary transition-colors" data-icon="library_books">library_books</button>
+                <button class="material-symbols-outlined text-on-primary hover:text-secondary transition-colors" data-icon="account_balance">account_balance</button>
+                <a class="hidden lg:inline-flex bg-primary border border-primary text-on-primary hover:bg-primary-container px-4 py-2 rounded-DEFAULT font-label-md text-label-md transition-colors flex items-center justify-center h-[38px]" href="#">Login</a>
+                <a class="bg-secondary text-primary hover:bg-secondary-fixed-dim px-4 py-2 rounded-DEFAULT font-label-md text-label-md font-bold transition-colors flex items-center justify-center h-[38px]" href="pmb.html">Apply Now</a>
+                <!-- Mobile Menu Toggle -->
+                <button id="mobile-menu-toggle" aria-label="Menu" class="md:hidden text-on-primary p-2 focus:outline-none">
+                    <span class="material-symbols-outlined text-2xl">menu</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="fixed inset-0 z-50 translate-x-full transition-transform duration-300 ease-in-out md:hidden" aria-hidden="true">
+        <!-- Overlay -->
+        <div id="mobile-menu-overlay" class="absolute inset-0 bg-primary/60 backdrop-blur-sm"></div>
+        <!-- Drawer Content -->
+        <div class="absolute right-0 top-0 bottom-0 w-64 bg-primary dark:bg-primary-container text-on-primary p-6 flex flex-col gap-6 shadow-xl z-10">
+            <div class="flex items-center justify-between">
+                <span class="font-display-lg text-[20px] font-bold text-on-primary tracking-tight">Menu</span>
+                <button id="mobile-menu-close" aria-label="Close Menu" class="text-on-primary p-1 rounded-full hover:bg-primary-container">
+                    <span class="material-symbols-outlined">close</span>
+                </button>
+            </div>
+            <nav class="flex flex-col gap-4 mt-4">
+                <a class="font-label-md text-label-md py-2 border-b border-on-primary/10 transition-colors hover:text-secondary" href="profil.html">Profile</a>
+                <a class="font-label-md text-label-md py-2 border-b border-on-primary/10 transition-colors hover:text-secondary" href="program-studi.html">Program Studi</a>
+                <a class="font-label-md text-label-md py-2 border-b border-on-primary/10 transition-colors hover:text-secondary" href="pmb.html">PMB</a>
+                <a class="font-label-md text-label-md py-2 border-b border-on-primary/10 transition-colors text-secondary" href="portal-layanan.html">Portal Layanan</a>
+            </nav>
+            <div class="mt-auto flex flex-col gap-4">
+                <button class="w-full font-label-md text-label-md bg-transparent border border-on-primary text-on-primary py-3 rounded hover:bg-primary-container">
+                    Login
+                </button>
+                <a href="pmb.html" class="w-full font-label-md text-label-md bg-secondary text-primary py-3 rounded font-bold hover:bg-secondary-fixed-dim transition-colors text-center">
+                    Apply Now
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content Canvas -->
+    <main class="flex-grow pt-[40px] pb-section-padding-desktop px-gutter max-w-container-max mx-auto w-full">
+        <!-- Header Section -->
+        <header class="text-center mb-12">
+            <h1 class="font-headline-md text-headline-md text-primary mb-4">Portal Layanan Terpadu</h1>
+            <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Akses cepat ke berbagai sistem informasi akademik dan layanan kampus STISIP BIKES. Silakan pilih layanan yang Anda butuhkan di bawah ini.</p>
+        </header>
+        <!-- Bento Grid Layout for Services -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- SIAKAD Card -->
+            <a class="group relative overflow-hidden rounded-xl border border-outline-variant bg-surface-container-lowest p-6 transition-all duration-300 hover:shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:border-secondary flex flex-col h-full" href="#">
+                <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary-fixed text-primary">
+                    <span class="material-symbols-outlined text-3xl" data-icon="school" data-weight="fill">school</span>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm text-primary mb-2">SIAKAD</h3>
+                <p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-6">Sistem Informasi Akademik untuk pengelolaan KRS, KHS, jadwal kuliah, dan administrasi akademik mahasiswa.</p>
+                <div class="flex items-center text-secondary font-label-md text-label-md mt-auto group-hover:text-primary transition-colors">
+                    <span>Akses SIAKAD</span>
+                    <span class="material-symbols-outlined ml-1 text-sm transform group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+                </div>
+            </a>
+            <!-- E-Learning Card -->
+            <a class="group relative overflow-hidden rounded-xl border border-outline-variant bg-surface-container-lowest p-6 transition-all duration-300 hover:shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:border-secondary flex flex-col h-full lg:col-span-2 lg:bg-primary-container lg:text-on-primary-container lg:border-none" href="#">
+                <!-- Decorative background pattern for large card -->
+                <div class="absolute inset-0 opacity-10 pointer-events-none hidden lg:block" style="background-image: radial-gradient(circle at 2px 2px, currentColor 1px, transparent 0); background-size: 24px 24px;"></div>
+                <div class="relative z-10">
+                    <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary-fixed text-primary lg:bg-secondary lg:text-primary">
+                        <span class="material-symbols-outlined text-3xl" data-icon="cast_for_education" data-weight="fill">cast_for_education</span>
+                    </div>
+                    <h3 class="font-headline-sm text-headline-sm text-primary lg:text-on-primary mb-2">E-Learning (LMS)</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant lg:text-on-primary-container flex-grow mb-6 max-w-lg">Platform pembelajaran daring (Learning Management System) untuk mengakses materi kuliah, tugas, kuis, dan forum diskusi antar mahasiswa dan dosen.</p>
+                    <div class="flex items-center text-secondary lg:text-secondary-fixed font-label-md text-label-md mt-auto group-hover:text-primary lg:group-hover:text-white transition-colors">
+                        <span>Masuk ke E-Learning</span>
+                        <span class="material-symbols-outlined ml-1 text-sm transform group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+                    </div>
+                </div>
+            </a>
+            <!-- Digital Library Card -->
+            <a class="group relative overflow-hidden rounded-xl border border-outline-variant bg-surface-container-lowest p-6 transition-all duration-300 hover:shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:border-secondary flex flex-col h-full" href="#">
+                <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary-fixed text-primary">
+                    <span class="material-symbols-outlined text-3xl" data-icon="menu_book" data-weight="fill">menu_book</span>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm text-primary mb-2">Perpustakaan Digital</h3>
+                <p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-6">Akses koleksi e-book, jurnal ilmiah, repositori karya ilmiah, dan katalog perpustakaan kampus.</p>
+                <div class="flex items-center text-secondary font-label-md text-label-md mt-auto group-hover:text-primary transition-colors">
+                    <span>Kunjungi E-Library</span>
+                    <span class="material-symbols-outlined ml-1 text-sm transform group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+                </div>
+            </a>
+            <!-- Alumni Portal Card -->
+            <a class="group relative overflow-hidden rounded-xl border border-outline-variant bg-surface-container-lowest p-6 transition-all duration-300 hover:shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:border-secondary flex flex-col h-full" href="#">
+                <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary-fixed text-primary">
+                    <span class="material-symbols-outlined text-3xl" data-icon="group" data-weight="fill">group</span>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm text-primary mb-2">Portal Alumni</h3>
+                <p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-6">Jejaring alumni, informasi lowongan kerja, legalisir ijazah online, dan pembaruan data lulusan.</p>
+                <div class="flex items-center text-secondary font-label-md text-label-md mt-auto group-hover:text-primary transition-colors">
+                    <span>Masuk Portal</span>
+                    <span class="material-symbols-outlined ml-1 text-sm transform group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+                </div>
+            </a>
+            <!-- Other Services List (Spanning full width on mobile, half on large) -->
+            <div class="col-span-1 md:col-span-2 lg:col-span-3 bg-surface-container-low rounded-xl border border-outline-variant p-6">
+                <h3 class="font-headline-sm text-headline-sm text-primary mb-4 border-b border-outline-variant pb-2">Layanan Tambahan</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <a class="flex items-center gap-3 p-3 rounded-lg hover:bg-surface-container transition-colors" href="#">
+                        <span class="material-symbols-outlined text-primary" data-icon="support_agent">support_agent</span>
+                        <div>
+                            <h4 class="font-label-md text-label-md text-primary">Helpdesk IT</h4>
+                            <p class="font-caption text-caption text-on-surface-variant">Bantuan teknis sistem kampus</p>
+                        </div>
+                    </a>
+                    <a class="flex items-center gap-3 p-3 rounded-lg hover:bg-surface-container transition-colors" href="#">
+                        <span class="material-symbols-outlined text-primary" data-icon="article">article</span>
+                        <div>
+                            <h4 class="font-label-md text-label-md text-primary">Jurnal OJS</h4>
+                            <p class="font-caption text-caption text-on-surface-variant">Sistem publikasi jurnal ilmiah</p>
+                        </div>
+                    </a>
+                    <a class="flex items-center gap-3 p-3 rounded-lg hover:bg-surface-container transition-colors" href="#">
+                        <span class="material-symbols-outlined text-primary" data-icon="account_balance_wallet">account_balance_wallet</span>
+                        <div>
+                            <h4 class="font-label-md text-label-md text-primary">Sistem Pembayaran</h4>
+                            <p class="font-caption text-caption text-on-surface-variant">Informasi tagihan &amp; riwayat bayar</p>
+                        </div>
+                    </a>
+                    <a class="flex items-center gap-3 p-3 rounded-lg hover:bg-surface-container transition-colors" href="#">
+                        <span class="material-symbols-outlined text-primary" data-icon="mail">mail</span>
+                        <div>
+                            <h4 class="font-label-md text-label-md text-primary">Webmail Kampus</h4>
+                            <p class="font-caption text-caption text-on-surface-variant">Akses email institusi (@stisipbikes.ac.id)</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer (Shared Component) -->
+    <footer class="bg-primary dark:bg-surface-container-highest text-secondary dark:text-secondary-fixed-dim full-width bottom-0 border-t border-outline-variant mt-20">
+        <div class="w-full py-section-padding-desktop px-gutter flex flex-col md:flex-row justify-between items-start max-w-container-max mx-auto gap-8">
+            <!-- Brand & Copyright -->
+            <div class="flex flex-col gap-4 max-w-sm">
+                <span class="font-headline-md text-headline-md font-bold text-on-primary">STISIP BIKES</span>
+                <p class="font-body-md text-body-md text-on-primary dark:text-on-surface-variant">© 2024 STISIP BIKES. All Rights Reserved. Sanctuary of Academic Excellence.</p>
+            </div>
+            <!-- Links -->
+            <div class="flex flex-col md:flex-row gap-8 md:gap-16">
+                <div class="flex flex-col gap-3">
+                    <a class="font-label-md text-label-md text-on-primary dark:text-on-surface-variant hover:text-secondary dark:hover:text-primary transition-colors opacity-80 hover:opacity-100 transition-opacity" href="#">Privacy Policy</a>
+                    <a class="font-label-md text-label-md text-on-primary dark:text-on-surface-variant hover:text-secondary dark:hover:text-primary transition-colors opacity-80 hover:opacity-100 transition-opacity" href="#">Campus Map</a>
+                    <a class="font-label-md text-label-md text-on-primary dark:text-on-surface-variant hover:text-secondary dark:hover:text-primary transition-colors opacity-80 hover:opacity-100 transition-opacity" href="#">Directory</a>
+                </div>
+                <div class="flex flex-col gap-3">
+                    <a class="font-label-md text-label-md text-on-primary dark:text-on-surface-variant hover:text-secondary dark:hover:text-primary transition-colors opacity-80 hover:opacity-100 transition-opacity" href="#">Career Center</a>
+                    <a class="font-label-md text-label-md text-on-primary dark:text-on-surface-variant hover:text-secondary dark:hover:text-primary transition-colors opacity-80 hover:opacity-100 transition-opacity" href="#">Alumni</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

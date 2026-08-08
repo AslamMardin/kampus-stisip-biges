@@ -1,237 +1,312 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PMB — Pendaftaran Online — STISIP Bina Generasi Polewali</title>
-<meta name="description" content="Alur pendaftaran, rincian biaya, formulir pendaftaran online, dan brosur PDF Penerimaan Mahasiswa Baru STISIP Bina Generasi Polewali.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Penerimaan Mahasiswa Baru - STISIP BIKES</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container": "#edeeef",
+                        "on-tertiary-fixed-variant": "#8f0f07",
+                        "secondary-container": "#fed488",
+                        "surface-tint": "#465f88",
+                        "surface-container-low": "#f3f4f5",
+                        "inverse-on-surface": "#f0f1f2",
+                        "error": "#ba1a1a",
+                        "on-tertiary-fixed": "#410000",
+                        "surface-variant": "#e1e3e4",
+                        "on-primary-fixed": "#001b3d",
+                        "on-secondary": "#ffffff",
+                        "tertiary-container": "#4c0000",
+                        "tertiary": "#200000",
+                        "error-container": "#ffdad6",
+                        "primary-container": "#002147",
+                        "on-primary": "#ffffff",
+                        "surface-container-high": "#e7e8e9",
+                        "tertiary-fixed": "#ffdad4",
+                        "tertiary-fixed-dim": "#ffb4a8",
+                        "outline": "#74777f",
+                        "surface-container-highest": "#e1e3e4",
+                        "on-tertiary-container": "#ed5542",
+                        "on-primary-fixed-variant": "#2d476f",
+                        "surface-bright": "#f8f9fa",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error": "#ffffff",
+                        "surface-dim": "#d9dadb",
+                        "secondary": "#775a19",
+                        "on-background": "#191c1d",
+                        "on-secondary-container": "#785a1a",
+                        "on-primary-container": "#708ab5",
+                        "surface": "#f8f9fa",
+                        "on-secondary-fixed": "#261900",
+                        "inverse-surface": "#2e3132",
+                        "on-surface-variant": "#44474e",
+                        "secondary-fixed": "#ffdea5",
+                        "primary-fixed-dim": "#aec7f6",
+                        "secondary-fixed-dim": "#e9c176",
+                        "background": "#f8f9fa",
+                        "on-tertiary": "#ffffff",
+                        "primary-fixed": "#d6e3ff",
+                        "on-surface": "#191c1d",
+                        "on-secondary-fixed-variant": "#5d4201",
+                        "inverse-primary": "#aec7f6",
+                        "outline-variant": "#c4c6cf",
+                        "on-error-container": "#93000a",
+                        "primary": "#000a1e"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "section-padding-desktop": "80px",
+                        "base": "8px",
+                        "section-padding-mobile": "40px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Merriweather"],
+                        "display-lg-mobile": ["Merriweather"],
+                        "label-md": ["Inter"],
+                        "body-md": ["Inter"],
+                        caption: ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-sm": ["Merriweather"],
+                        "headline-md": ["Merriweather"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "display-lg-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "label-md": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        caption: ["12px", { "lineHeight": "1.4", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-sm": ["24px", { "lineHeight": "1.4", "fontWeight": "700" }],
+                        "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "700" }]
+                    }
+                },
+            },
+        }
+    </script>
 </head>
-<body>
-
-<div class="topbar">
-  <div class="container">
-    <div class="topbar-links">
-      <a href="tel:+6281234567890"><span>Tel</span>+62 812-3456-7890</a>
-      <a href="mailto:info@stisipbgp.ac.id"><span>Email</span>info@stisipbgp.ac.id</a>
-    </div>
-    <div class="topbar-links">
-      <a href="#" target="_blank" rel="noopener">Portal SIAKAD</a>
-      <a href="pmb.html">PMB 2026/2027</a>
-    </div>
-  </div>
-</div>
-
-<header class="site-header">
-  <div class="container">
-    <a href="index.html" class="brand">
-      <span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="#0B2545" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/><path d="M22 10v6"/></svg></span>
-      <span class="brand-text"><strong>STISIP Bina Generasi</strong><span>Polewali Mandar</span></span>
-    </a>
-    <nav aria-label="Navigasi utama">
-      <ul class="nav" data-nav>
-        <li><a href="index.html">Beranda</a></li>
-        <li><a href="profil.html">Profil</a></li>
-        <li class="has-dropdown">
-          <button class="nav-toggle" aria-expanded="false">Program Studi<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 4l4 4 4-4"/></svg></button>
-          <div class="dropdown">
-            <a href="program-studi-ian.html">S1 Ilmu Administrasi Negara<small>Kurikulum, prospek kerja &amp; dosen</small></a>
-            <a href="program-studi-ip.html">S1 Ilmu Pemerintahan<small>Kurikulum, prospek kerja &amp; dosen</small></a>
-          </div>
-        </li>
-        <li><a href="pmb.html">PMB</a></li>
-        <li class="has-dropdown">
-          <button class="nav-toggle" aria-expanded="false">Layanan<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 4l4 4 4-4"/></svg></button>
-          <div class="dropdown">
-            <a href="layanan.html#lpm">Dokumen Mutu (SPMI/SOP) LPM</a>
-            <a href="layanan.html#lppm">Jurnal Penelitian LPPM</a>
-            <a href="layanan.html#siakad">Portal Akademik SIAKAD/Lontara</a>
-            <a href="layanan.html#kemahasiswaan">Kemahasiswaan</a>
-            <a href="layanan.html#kip">Beasiswa KIP-Kuliah</a>
-          </div>
-        </li>
-        <li><a href="kontak.html">Kontak</a></li>
-        <li class="header-cta" style="margin-left:8px;"><a href="#formulir" class="cta-btn">Daftar Sekarang</a></li>
-      </ul>
-    </nav>
-    <button class="menu-toggle" data-menu-toggle aria-label="Buka menu" aria-expanded="false"><span></span><span></span><span></span></button>
-  </div>
-</header>
-
-<section class="page-header">
-  <div class="container">
-    <div class="breadcrumb"><a href="index.html">Beranda</a><span>/</span><span>PMB</span></div>
-    <h1>Pendaftaran Mahasiswa Baru 2026/2027</h1>
-    <p>Semua yang perlu Anda ketahui: alur pendaftaran, rincian biaya, formulir online, dan brosur kampus.</p>
-  </div>
-</section>
-<div class="woven-rule"></div>
-
-<!-- ALUR PENDAFTARAN -->
-<section class="section">
-  <div class="container">
-    <div class="section-head reveal">
-      <span class="eyebrow">Langkah Demi Langkah</span>
-      <h2>Alur Pendaftaran</h2>
-      <p>Empat langkah sederhana untuk resmi menjadi mahasiswa STISIP Bina Generasi Polewali.</p>
-    </div>
-    <div class="alur reveal" style="max-width:760px;">
-      <div class="alur-item">
-        <div class="alur-num"></div>
-        <div class="alur-body">
-          <h3>Isi Formulir Pendaftaran Online</h3>
-          <p>Lengkapi data diri dan pilihan program studi melalui formulir pada halaman ini, atau langsung melalui WhatsApp Admin PMB.</p>
-        </div>
-      </div>
-      <div class="alur-item">
-        <div class="alur-num"></div>
-        <div class="alur-body">
-          <h3>Unggah Berkas Persyaratan</h3>
-          <p>Siapkan scan ijazah/SKL, KTP, KK, pas foto, dan dokumen pendukung lain sesuai instruksi admin.</p>
-        </div>
-      </div>
-      <div class="alur-item">
-        <div class="alur-num"></div>
-        <div class="alur-body">
-          <h3>Pembayaran Biaya Pendaftaran</h3>
-          <p>Lakukan pembayaran biaya pendaftaran melalui rekening resmi kampus yang diinformasikan admin.</p>
-        </div>
-      </div>
-      <div class="alur-item">
-        <div class="alur-num"></div>
-        <div class="alur-body">
-          <h3>Verifikasi &amp; Herregistrasi</h3>
-          <p>Setelah dinyatakan lolos verifikasi, calon mahasiswa melakukan herregistrasi dan mengikuti orientasi kampus.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- BIAYA -->
-<section class="section section-tint">
-  <div class="container">
-    <div class="section-head center reveal">
-      <span class="eyebrow" style="justify-content:center;">Investasi Pendidikan</span>
-      <h2>Rincian Biaya Pendaftaran</h2>
-      <p>Estimasi biaya berikut berlaku untuk tahun akademik 2026/2027. Nominal dapat berubah — konfirmasi ke Admin PMB untuk info terbaru.</p>
-    </div>
-    <div class="grid grid-2" style="max-width:820px;margin:0 auto;">
-      <div class="pricing-card reveal">
-        <h3>Biaya Pendaftaran</h3>
-        <p style="font-size:.86rem;">Dibayarkan sekali saat mendaftar sebagai calon mahasiswa baru.</p>
-        <div class="price-row"><span>Formulir &amp; Seleksi</span><strong>Rp 250.000</strong></div>
-        <div class="price-row"><span>Jaket Almamater</span><strong>Rp 300.000</strong></div>
-        <div class="price-row"><span>Kartu Mahasiswa</span><strong>Rp 50.000</strong></div>
-      </div>
-      <div class="pricing-card featured reveal">
-        <h3>Biaya Studi per Semester</h3>
-        <p style="font-size:.86rem;">Berlaku untuk kedua program studi, mengikuti kebijakan akademik terbaru.</p>
-        <div class="price-row"><span>SPP Reguler</span><strong>Rp 1.500.000</strong></div>
-        <div class="price-row"><span>Dana Kemahasiswaan</span><strong>Rp 150.000</strong></div>
-        <div class="price-row"><span>Dana Praktikum/KKN (bertahap)</span><strong>Menyesuaikan</strong></div>
-      </div>
-    </div>
-    <p style="text-align:center;margin-top:20px;font-size:.82rem;color:var(--ink-faint);">*Nominal bersifat estimasi/contoh. Silakan hubungi Admin PMB untuk rincian resmi dan program cicilan/beasiswa.</p>
-  </div>
-</section>
-
-<!-- FORMULIR -->
-<section class="section" id="formulir">
-  <div class="container">
-    <div class="two-col">
-      <div class="reveal">
-        <span class="eyebrow">Formulir Online</span>
-        <h2>Daftar Sekarang</h2>
-        <p>Formulir pendaftaran ditanamkan (embed) melalui layanan pihak ketiga sesuai arsitektur website statis — dapat diganti dengan Google Forms, Typeform, atau Formspree sesuai kebutuhan admin.</p>
-        <p>Lebih suka cara instan? Kirim data pendaftaran langsung ke WhatsApp Admin PMB, lengkap dengan format pesan otomatis.</p>
-        <a class="btn btn-primary" href="https://wa.me/6281234567890?text=Halo%20Admin%20PMB%2C%20saya%20ingin%20mendaftar.%0ANama%3A%0AAsal%20Sekolah%3A%0APilihan%20Program%20Studi%3A" target="_blank" rel="noopener">
-          Daftar via WhatsApp
-          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
-        </a>
-      </div>
-      <div class="reveal">
-        <div class="letterhead" data-doc="Formulir PMB" style="padding:0;overflow:hidden;">
-          <div style="padding:28px 28px 0;">
-            <h3>Simulasi Formulir Pendaftaran</h3>
-            <p style="font-size:.85rem;">Ganti blok ini dengan kode embed resmi (mis. iframe Google Forms) saat website diluncurkan.</p>
-          </div>
-          <div style="background:var(--paper-tint);margin:20px 0 0;padding:26px 28px;border-top:1px solid var(--paper-line);">
-            <div style="display:grid;gap:14px;">
-              <div>
-                <label style="font-size:.8rem;font-weight:700;color:var(--navy-900);display:block;margin-bottom:6px;">Nama Lengkap</label>
-                <div style="background:#fff;border:1px solid var(--paper-line);border-radius:8px;height:42px;"></div>
-              </div>
-              <div>
-                <label style="font-size:.8rem;font-weight:700;color:var(--navy-900);display:block;margin-bottom:6px;">Pilihan Program Studi</label>
-                <div style="background:#fff;border:1px solid var(--paper-line);border-radius:8px;height:42px;"></div>
-              </div>
-              <div>
-                <label style="font-size:.8rem;font-weight:700;color:var(--navy-900);display:block;margin-bottom:6px;">Nomor WhatsApp Aktif</label>
-                <div style="background:#fff;border:1px solid var(--paper-line);border-radius:8px;height:42px;"></div>
-              </div>
-              <span class="btn btn-navy" style="justify-content:center;opacity:.6;cursor:not-allowed;">Placeholder — Sambungkan ke Formspree/Google Forms</span>
+<body class="bg-background text-on-background font-body-md text-body-md antialiased pt-[72px]">
+    <!-- TopNavBar -->
+    <header class="fixed top-0 w-full z-50 flex flex-col items-center px-gutter max-w-container-max mx-auto bg-primary dark:bg-primary-container shadow-sm dark:shadow-none docked full-width left-0 right-0">
+        <div class="flex items-center justify-between w-full h-[72px]">
+            <!-- Brand -->
+            <a href="index.html" class="flex items-center gap-4 hover:opacity-90 transition-opacity">
+                <img alt="University Crest" class="h-10 w-10 object-contain" data-alt="A distinguished university crest or shield logo for STISIP BIKES, featuring traditional academic symbols like a book, torch, or laurel wreath, rendered in gold and navy blue, conveying institutional authority and prestige, isolated on a transparent or solid background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3j5mCICWDBxE0sxY-S5ohcpQ2WGgsRXALxBsUKRmHgi90rDl5AfffgE3xgJZxf40_fp3bPhWYMDvMkRnQt3WU94nt1gMeakplOgu4HfkECfZmNr0nz3t2PXaONWzto2OcTz5iIkUM0mh1kxauxGCF3KvbJNIkvarAFwDxfsStUgedRCjNyZP_QjEMNFt4Xwin3-6MJr9EKNYuAcUkmgwm4Syu3Hn2nCLejoKGPo_p2gTVeiQcMjU"/>
+                <span class="font-display-lg text-[20px] md:text-[24px] font-bold text-on-primary dark:text-on-primary-fixed">STISIP BIKES</span>
+            </a>
+            <!-- Navigation Links (Desktop) -->
+            <nav class="hidden md:flex items-center gap-8">
+                <a class="font-label-md text-label-md text-on-primary dark:text-on-primary-container hover:text-secondary-fixed transition-colors duration-200 py-2" href="profil.html">Profile</a>
+                <a class="font-label-md text-label-md text-on-primary dark:text-on-primary-container hover:text-secondary-fixed transition-colors duration-200 py-2" href="program-studi.html">Program Studi</a>
+                <a class="font-label-md text-label-md text-secondary dark:text-secondary-fixed border-b-2 border-secondary pb-1" href="pmb.html">PMB</a>
+                <a class="font-label-md text-label-md text-on-primary dark:text-on-primary-container hover:text-secondary-fixed transition-colors duration-200 py-2" href="portal-layanan.html">Portal Layanan</a>
+            </nav>
+            <!-- Actions -->
+            <div class="flex items-center gap-4">
+                <button class="hidden md:flex items-center justify-center h-10 px-4 rounded font-label-md text-label-md bg-transparent border border-on-primary text-on-primary hover:bg-primary-container transition-colors">Login</button>
+                <button class="hidden md:flex items-center justify-center h-10 px-4 rounded font-label-md text-label-md bg-secondary text-primary hover:bg-secondary-fixed-dim transition-colors font-bold">Apply Now</button>
+                <div class="flex items-center gap-2">
+                    <button aria-label="Library" class="p-2 text-on-primary hover:bg-primary-container rounded transition-colors scale-95 active:transition-transform">
+                        <span class="material-symbols-outlined">library_books</span>
+                    </button>
+                    <button aria-label="Portal" class="p-2 text-on-primary hover:bg-primary-container rounded transition-colors scale-95 active:transition-transform">
+                        <span class="material-symbols-outlined">account_balance</span>
+                    </button>
+                </div>
+                <!-- Mobile Menu Toggle -->
+                <button id="mobile-menu-toggle" aria-label="Menu" class="md:hidden text-on-primary p-2 focus:outline-none">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
             </div>
-          </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
+    </header>
 
-<!-- BROSUR -->
-<section class="section section-tint" id="brosur">
-  <div class="container">
-    <div class="cta-strip reveal" style="background:linear-gradient(120deg,var(--navy-900),var(--navy-700) 65%,var(--blue-500));">
-      <div>
-        <h2>Unduh Brosur PMB (PDF)</h2>
-        <p>Info lengkap program studi, biaya, dan jadwal pendaftaran dalam satu berkas.</p>
-      </div>
-      <a class="btn btn-outline" style="border-color:#fff;" href="#">
-        Unduh Brosur PDF
-        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v8m0 0 3-3m-3 3-3-3M3 13h10"/></svg>
-      </a>
-    </div>
-  </div>
-</section>
-
-<footer class="site-footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-col">
-        <div class="footer-brand"><span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="#0B2545" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/><path d="M22 10v6"/></svg></span><strong>STISIP Bina Generasi<br>Polewali</strong></div>
-        <address>Jl. Mr. Muh. Yamin No. 195, Manding,<br>Polewali Mandar, Sulawesi Barat</address>
-        <p>Tel: +62 812-3456-7890<br>Email: info@stisipbgp.ac.id</p>
-        <div class="social-row">
-          <a href="#" aria-label="Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
-          <a href="#" aria-label="Facebook" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M15 8h2V4h-2a4 4 0 0 0-4 4v2H9v4h2v6h4v-6h2.5l.5-4H15V8Z"/></svg></a>
-          <a href="#" aria-label="YouTube" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="6" width="20" height="12" rx="4"/><path d="M10.5 9.5v5l4.5-2.5-4.5-2.5Z" fill="currentColor" stroke="none"/></svg></a>
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="fixed inset-0 z-50 translate-x-full transition-transform duration-300 ease-in-out md:hidden" aria-hidden="true">
+        <!-- Overlay -->
+        <div id="mobile-menu-overlay" class="absolute inset-0 bg-primary/60 backdrop-blur-sm"></div>
+        <!-- Drawer Content -->
+        <div class="absolute right-0 top-0 bottom-0 w-64 bg-primary dark:bg-primary-container text-on-primary p-6 flex flex-col gap-6 shadow-xl z-10">
+            <div class="flex items-center justify-between">
+                <span class="font-display-lg text-[20px] font-bold text-on-primary tracking-tight">Menu</span>
+                <button id="mobile-menu-close" aria-label="Close Menu" class="text-on-primary p-1 rounded-full hover:bg-primary-container">
+                    <span class="material-symbols-outlined">close</span>
+                </button>
+            </div>
+            <nav class="flex flex-col gap-4 mt-4">
+                <a class="font-label-md text-label-md py-2 border-b border-on-primary/10 transition-colors hover:text-secondary" href="profil.html">Profile</a>
+                <a class="font-label-md text-label-md py-2 border-b border-on-primary/10 transition-colors hover:text-secondary" href="program-studi.html">Program Studi</a>
+                <a class="font-label-md text-label-md py-2 border-b border-on-primary/10 transition-colors text-secondary" href="pmb.html">PMB</a>
+                <a class="font-label-md text-label-md py-2 border-b border-on-primary/10 transition-colors hover:text-secondary" href="portal-layanan.html">Portal Layanan</a>
+            </nav>
+            <div class="mt-auto flex flex-col gap-4">
+                <button class="w-full font-label-md text-label-md bg-transparent border border-on-primary text-on-primary py-3 rounded hover:bg-primary-container">
+                    Login
+                </button>
+                <button class="w-full font-label-md text-label-md bg-secondary text-primary py-3 rounded font-bold hover:bg-secondary-fixed-dim transition-colors text-center">
+                    Apply Now
+                </button>
+            </div>
         </div>
-      </div>
-      <div class="footer-col">
-        <h4>Tautan Cepat</h4>
-        <ul><li><a href="pmb.html">Pendaftaran PMB Online</a></li><li><a href="layanan.html#siakad">Portal SIAKAD</a></li><li><a href="layanan.html#lpm">Dokumen Mutu LPM</a></li><li><a href="layanan.html#elibrary">E-Library</a></li></ul>
-      </div>
-      <div class="footer-col">
-        <h4>Halaman</h4>
-        <ul><li><a href="profil.html">Profil Institusi</a></li><li><a href="program-studi-ian.html">Prodi Administrasi Negara</a></li><li><a href="program-studi-ip.html">Prodi Ilmu Pemerintahan</a></li><li><a href="kontak.html">Kontak &amp; Lokasi</a></li></ul>
-      </div>
     </div>
-    <div class="footer-bottom">
-      <span>&copy; <span data-year>2026</span> STISIP Bina Generasi Polewali. Seluruh hak cipta dilindungi.</span>
-      <span>Dibangun sebagai website statis — HTML · CSS · JavaScript</span>
-    </div>
-  </div>
-</footer>
 
-<a class="wa-float" href="https://wa.me/6281234567890?text=Halo%20Admin%20PMB%2C%20saya%20ingin%20bertanya%20soal%20pendaftaran." target="_blank" rel="noopener" aria-label="Chat WhatsApp Admin PMB">
-  <span class="ping"></span>
-  <svg viewBox="0 0 24 24" fill="currentColor" style="position:relative;"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.87.51 3.63 1.4 5.14L2 22l5.12-1.5a9.87 9.87 0 0 0 4.92 1.31h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2Zm5.79 14.02c-.24.68-1.4 1.3-1.93 1.35-.5.05-.94.24-3.17-.66-2.68-1.1-4.4-3.83-4.53-4-.13-.17-1.06-1.42-1.06-2.7 0-1.29.68-1.92.92-2.18.24-.26.53-.32.7-.32.18 0 .35 0 .5.01.16.01.38-.06.6.45.24.56.79 1.94.86 2.08.07.14.12.3.02.48-.1.18-.14.29-.28.45-.14.16-.29.35-.42.47-.14.13-.28.28-.12.55.16.27.71 1.17 1.53 1.89 1.05.94 1.94 1.23 2.21 1.37.27.14.43.12.58-.07.16-.19.68-.79.86-1.06.18-.27.36-.22.6-.13.24.09 1.52.72 1.78.85.26.13.43.19.5.3.06.11.06.63-.18 1.31Z"/></svg>
-</a>
+    <!-- Hero Section -->
+    <section class="relative w-full h-[600px] flex items-center justify-center px-gutter">
+        <div class="absolute inset-0 z-0">
+            <div class="w-full h-full bg-cover bg-center" data-alt="A sweeping, wide-angle photograph of a prestigious university campus building at golden hour. The architecture is modern yet grounded, featuring large glass windows reflecting the sunset. The scene is framed by manicured green lawns and mature trees. The lighting is warm and inviting, evoking a sense of academic excellence and aspiration." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD3j5mCICWDBxE0sxY-S5ohcpQ2WGgsRXALxBsUKRmHgi90rDl5AfffgE3xgJZxf40_fp3bPhWYMDvMkRnQt3WU94nt1gMeakplOgu4HfkECfZmNr0nz3t2PXaONWzto2OcTz5iIkUM0mh1kxauxGCF3KvbJNIkvarAFwDxfsStUgedRCjNyZP_QjEMNFt4Xwin3-6MJr9EKNYuAcUkmgwm4Syu3Hn2nCLejoKGPo_p2gTVeiQcMjU')"></div>
+            <div class="absolute inset-0 bg-primary/40 bg-gradient-to-t from-primary/80 to-transparent"></div>
+        </div>
+        <div class="relative z-10 max-w-container-max mx-auto w-full text-center flex flex-col items-center">
+            <h1 class="font-display-lg text-display-lg md:text-[64px] text-on-primary mb-6 drop-shadow-md">Penerimaan Mahasiswa Baru</h1>
+            <p class="font-body-lg text-body-lg text-on-primary/90 max-w-2xl mb-8">Wujudkan masa depan gemilang bersama STISIP BIKES. Mari bergabung dalam komunitas akademik yang unggul, inovatif, dan berdedikasi tinggi.</p>
+            <div class="flex flex-col sm:flex-row gap-4">
+                <button class="h-12 px-8 rounded bg-secondary text-primary font-label-md text-label-md font-bold hover:bg-secondary-fixed-dim transition-colors shadow-sm">Daftar Sekarang</button>
+                <button class="h-12 px-8 rounded bg-transparent border border-on-primary text-on-primary font-label-md text-label-md hover:bg-on-primary/10 transition-colors">Unduh Brosur</button>
+            </div>
+        </div>
+    </section>
 
-<script src="js/main.js"></script>
+    <!-- Main Content -->
+    <main class="max-w-container-max mx-auto px-gutter py-section-padding-desktop">
+        <!-- Info Cards Bento Grid -->
+        <section class="mb-section-padding-desktop">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="md:col-span-2 bg-surface rounded-xl border border-outline-variant p-8 flex flex-col justify-between hover:shadow-[0_2px_8px_rgba(0,0,0,0.04)] transition-shadow">
+                    <div>
+                        <span class="material-symbols-outlined text-secondary text-4xl mb-4" data-weight="fill" style="font-variation-settings: 'FILL' 1;">school</span>
+                        <h2 class="font-headline-md text-headline-md text-on-surface mb-4">Jalur Pendaftaran</h2>
+                        <p class="font-body-md text-body-md text-on-surface-variant mb-6">Kami menyediakan berbagai jalur penerimaan untuk mengakomodasi potensi setiap calon mahasiswa.</p>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="p-4 border border-outline-variant rounded bg-surface-container-lowest">
+                            <h3 class="font-label-md text-label-md text-primary mb-1">Jalur Prestasi</h3>
+                            <p class="font-caption text-caption text-on-surface-variant">Bebas tes tertulis bagi siswa berprestasi akademik maupun non-akademik.</p>
+                        </div>
+                        <div class="p-4 border border-outline-variant rounded bg-surface-container-lowest">
+                            <h3 class="font-label-md text-label-md text-primary mb-1">Jalur Reguler</h3>
+                            <p class="font-caption text-caption text-on-surface-variant">Seleksi melalui tes tertulis (CBT) yang diselenggarakan secara berkala.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-primary-container rounded-xl border border-outline-variant p-8 flex flex-col justify-between">
+                    <div>
+                        <span class="material-symbols-outlined text-secondary-fixed text-4xl mb-4" data-weight="fill" style="font-variation-settings: 'FILL' 1;">calendar_month</span>
+                        <h2 class="font-headline-sm text-headline-sm text-on-primary mb-4">Gelombang Pendaftaran</h2>
+                        <ul class="space-y-4">
+                            <li class="flex justify-between items-center border-b border-on-primary/20 pb-2">
+                                <span class="font-label-md text-label-md text-on-primary">Gelombang 1</span>
+                                <span class="font-caption text-caption text-secondary-fixed">Berakhir</span>
+                            </li>
+                            <li class="flex justify-between items-center border-b border-on-primary/20 pb-2">
+                                <span class="font-label-md text-label-md text-on-primary">Gelombang 2</span>
+                                <span class="font-caption text-caption text-secondary-fixed">Sedang Berlangsung</span>
+                            </li>
+                            <li class="flex justify-between items-center border-b border-on-primary/20 pb-2">
+                                <span class="font-label-md text-label-md text-on-primary">Gelombang 3</span>
+                                <span class="font-caption text-caption text-on-primary/70">Segera Dibuka</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline Section -->
+        <section class="mb-section-padding-desktop">
+            <h2 class="font-headline-md text-headline-md text-on-surface mb-12 text-center">Alur Pendaftaran</h2>
+            <div class="relative max-w-4xl mx-auto">
+                <!-- Vertical Line -->
+                <div class="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-outline-variant transform md:-translate-x-1/2"></div>
+                <div class="space-y-12">
+                    <!-- Step 1 -->
+                    <div class="relative flex flex-col md:flex-row items-center md:justify-between w-full">
+                        <div class="order-1 md:w-5/12 flex justify-start md:justify-end pr-8 pl-12 md:pl-0">
+                            <div class="bg-surface border border-outline-variant p-6 rounded-lg w-full">
+                                <h3 class="font-headline-sm text-headline-sm text-primary mb-2">1. Registrasi Akun</h3>
+                                <p class="font-body-md text-body-md text-on-surface-variant">Buat akun pada portal PMB menggunakan email aktif dan lengkapi data awal.</p>
+                            </div>
+                        </div>
+                        <div class="absolute left-0 md:left-1/2 flex items-center justify-center w-8 h-8 bg-secondary rounded-full border-4 border-background transform md:-translate-x-1/2 mt-6 md:mt-0 z-10">
+                            <span class="font-label-md text-label-md text-primary font-bold">1</span>
+                        </div>
+                        <div class="order-3 md:w-5/12"></div>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="relative flex flex-col md:flex-row items-center md:justify-between w-full">
+                        <div class="order-3 md:order-1 md:w-5/12"></div>
+                        <div class="absolute left-0 md:left-1/2 flex items-center justify-center w-8 h-8 bg-surface-variant rounded-full border-4 border-background transform md:-translate-x-1/2 mt-6 md:mt-0 z-10">
+                            <span class="font-label-md text-label-md text-on-surface-variant font-bold">2</span>
+                        </div>
+                        <div class="order-1 md:order-3 md:w-5/12 flex justify-start pl-12 md:pl-8">
+                            <div class="bg-surface border border-outline-variant p-6 rounded-lg w-full">
+                                <h3 class="font-headline-sm text-headline-sm text-primary mb-2">2. Isi Formulir</h3>
+                                <p class="font-body-md text-body-md text-on-surface-variant">Lengkapi biodata diri, data sekolah asal, dan pilih program studi yang diminati.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="relative flex flex-col md:flex-row items-center md:justify-between w-full">
+                        <div class="order-1 md:w-5/12 flex justify-start md:justify-end pr-8 pl-12 md:pl-0">
+                            <div class="bg-surface border border-outline-variant p-6 rounded-lg w-full">
+                                <h3 class="font-headline-sm text-headline-sm text-primary mb-2">3. Pembayaran</h3>
+                                <p class="font-body-md text-body-md text-on-surface-variant">Lakukan pembayaran biaya pendaftaran melalui bank atau metode yang tersedia.</p>
+                            </div>
+                        </div>
+                        <div class="absolute left-0 md:left-1/2 flex items-center justify-center w-8 h-8 bg-surface-variant rounded-full border-4 border-background transform md:-translate-x-1/2 mt-6 md:mt-0 z-10">
+                            <span class="font-label-md text-label-md text-on-surface-variant font-bold">3</span>
+                        </div>
+                        <div class="order-3 md:w-5/12"></div>
+                    </div>
+                    <!-- Step 4 -->
+                    <div class="relative flex flex-col md:flex-row items-center md:justify-between w-full">
+                        <div class="order-3 md:order-1 md:w-5/12"></div>
+                        <div class="absolute left-0 md:left-1/2 flex items-center justify-center w-8 h-8 bg-surface-variant rounded-full border-4 border-background transform md:-translate-x-1/2 mt-6 md:mt-0 z-10">
+                            <span class="font-label-md text-label-md text-on-surface-variant font-bold">4</span>
+                        </div>
+                        <div class="order-1 md:order-3 md:w-5/12 flex justify-start pl-12 md:pl-8">
+                            <div class="bg-surface border border-outline-variant p-6 rounded-lg w-full">
+                                <h3 class="font-headline-sm text-headline-sm text-primary mb-2">4. Seleksi &amp; Pengumuman</h3>
+                                <p class="font-body-md text-body-md text-on-surface-variant">Ikuti tahapan seleksi (jika ada) dan cek pengumuman kelulusan di portal PMB.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full py-section-padding-desktop px-gutter flex flex-col md:flex-row justify-between items-start max-w-container-max mx-auto bg-primary dark:bg-surface-container-highest border-t border-outline-variant text-secondary dark:text-secondary-fixed-dim">
+        <div class="mb-8 md:mb-0">
+            <div class="font-headline-md text-headline-md font-bold text-on-primary mb-4">STISIP BIKES</div>
+            <p class="font-body-md text-body-md text-on-primary dark:text-on-surface-variant max-w-sm">© 2024 STISIP BIKES. All Rights Reserved. Sanctuary of Academic Excellence.</p>
+        </div>
+        <nav class="flex flex-col md:flex-row gap-6 md:gap-12">
+            <div class="flex flex-col gap-4">
+                <a class="font-label-md text-label-md text-on-primary dark:text-on-surface-variant hover:text-secondary dark:hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#">Privacy Policy</a>
+                <a class="font-label-md text-label-md text-on-primary dark:text-on-surface-variant hover:text-secondary dark:hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#">Campus Map</a>
+            </div>
+            <div class="flex flex-col gap-4">
+                <a class="font-label-md text-label-md text-on-primary dark:text-on-surface-variant hover:text-secondary dark:hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#">Directory</a>
+                <a class="font-label-md text-label-md text-on-primary dark:text-on-surface-variant hover:text-secondary dark:hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#">Career Center</a>
+                <a class="font-label-md text-label-md text-on-primary dark:text-on-surface-variant hover:text-secondary dark:hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#">Alumni</a>
+            </div>
+        </nav>
+    </footer>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>

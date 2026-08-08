@@ -1,320 +1,353 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>STISIP Bina Generasi Polewali — Beranda</title>
-<meta name="description" content="Website resmi STISIP Bina Generasi Polewali. Informasi akademik, program studi, dan pendaftaran mahasiswa baru (PMB).">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Beranda - STISIP BIKES</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Merriweather:wght@700&amp;display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-container": "#edeeef",
+                        "on-tertiary-fixed-variant": "#8f0f07",
+                        "secondary-container": "#fed488",
+                        "surface-tint": "#465f88",
+                        "surface-container-low": "#f3f4f5",
+                        "inverse-on-surface": "#f0f1f2",
+                        "error": "#ba1a1a",
+                        "on-tertiary-fixed": "#410000",
+                        "surface-variant": "#e1e3e4",
+                        "on-primary-fixed": "#001b3d",
+                        "on-secondary": "#ffffff",
+                        "tertiary-container": "#4c0000",
+                        "tertiary": "#200000",
+                        "error-container": "#ffdad6",
+                        "primary-container": "#002147",
+                        "on-primary": "#ffffff",
+                        "surface-container-high": "#e7e8e9",
+                        "tertiary-fixed": "#ffdad4",
+                        "tertiary-fixed-dim": "#ffb4a8",
+                        "outline": "#74777f",
+                        "surface-container-highest": "#e1e3e4",
+                        "on-tertiary-container": "#ed5542",
+                        "on-primary-fixed-variant": "#2d476f",
+                        "surface-bright": "#f8f9fa",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error": "#ffffff",
+                        "surface-dim": "#d9dadb",
+                        "secondary": "#775a19",
+                        "on-background": "#191c1d",
+                        "on-secondary-container": "#785a1a",
+                        "on-primary-container": "#708ab5",
+                        "surface": "#f8f9fa",
+                        "on-secondary-fixed": "#261900",
+                        "inverse-surface": "#2e3132",
+                        "on-surface-variant": "#44474e",
+                        "secondary-fixed": "#ffdea5",
+                        "primary-fixed-dim": "#aec7f6",
+                        "secondary-fixed-dim": "#e9c176",
+                        "background": "#f8f9fa",
+                        "on-tertiary": "#ffffff",
+                        "primary-fixed": "#d6e3ff",
+                        "on-surface": "#191c1d",
+                        "on-secondary-fixed-variant": "#5d4201",
+                        "inverse-primary": "#aec7f6",
+                        "outline-variant": "#c4c6cf",
+                        "on-error-container": "#93000a",
+                        "primary": "#000a1e"
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.125rem",
+                        lg: "0.25rem",
+                        xl: "0.5rem",
+                        full: "0.75rem"
+                    },
+                    spacing: {
+                        gutter: "24px",
+                        "container-max": "1280px",
+                        "section-padding-desktop": "80px",
+                        base: "8px",
+                        "section-padding-mobile": "40px"
+                    },
+                    fontFamily: {
+                        "display-lg": ["Merriweather"],
+                        "display-lg-mobile": ["Merriweather"],
+                        "label-md": ["Inter"],
+                        "body-md": ["Inter"],
+                        caption: ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-sm": ["Merriweather"],
+                        "headline-md": ["Merriweather"]
+                    },
+                    fontSize: {
+                        "display-lg": ["48px", { lineHeight: "1.2", letterSpacing: "-0.02em", fontWeight: "700" }],
+                        "display-lg-mobile": ["32px", { lineHeight: "1.2", fontWeight: "700" }],
+                        "label-md": ["14px", { lineHeight: "1.2", letterSpacing: "0.05em", fontWeight: "600" }],
+                        "body-md": ["16px", { lineHeight: "1.6", fontWeight: "400" }],
+                        caption: ["12px", { lineHeight: "1.4", fontWeight: "400" }],
+                        "body-lg": ["18px", { lineHeight: "1.6", fontWeight: "400" }],
+                        "headline-sm": ["24px", { lineHeight: "1.4", fontWeight: "700" }],
+                        "headline-md": ["32px", { lineHeight: "1.3", fontWeight: "700" }]
+                    }
+                }
+            }
+        };
+    </script>
+    <style>
+        .hero-overlay {
+            background: linear-gradient(180deg, rgba(0, 10, 30, 0.4) 0%, rgba(0, 10, 30, 0.8) 100%);
+        }
+    </style>
 </head>
-<body>
+<body class="bg-background text-on-surface font-body-md antialiased overflow-x-hidden pt-[72px]">
+    <!-- TopNavBar (Shared Component) -->
+    <header aria-label="Main Navigation" class="bg-primary dark:bg-primary-container shadow-sm dark:shadow-none docked full-width top-0 fixed w-full z-50 flex flex-col items-center px-gutter max-w-container-max mx-auto h-[72px] justify-center left-0 right-0">
+        <div class="w-full max-w-container-max flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-4 hover:opacity-90 transition-opacity">
+                <img alt="University Crest" class="h-10 w-10 object-contain" data-alt="University Crest logo for STISIP BIKES. A formal, intricate crest featuring traditional academic symbols like an open book, a torch, and a shield. The crest is rendered in a sharp, crisp white line art style against the dark navy primary color background. It conveys historical prestige and institutional authority." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBP-tHZ8NmtPPbczwLtMwYl5XbrOQ1e22LQOZHZnYeikK1ZlBciIJeZNxJquPue7R6MTJg8qcRuZm_0RhiQipDplWNSfsAHEYD3vm1dcS5EEQBgP-LalLwHuA4hRBfvGdc5_sd3KK2hmDbti-37XE_mo57QMh47X-Q4lOipjuyR5nVsoGXFm5U2xpvndcgwmPY2yrXhwfmOKKUYpB8tD6ejoo47e5e5sk7QV0lhrSd2QDyxhjQrowo"/>
+                <span class="font-display-lg text-[24px] font-bold text-on-primary dark:text-on-primary-fixed tracking-tight">STISIP BIKES</span>
+            </a>
+            <nav aria-label="Desktop Navigation" class="hidden md:flex items-center gap-8">
+                <a class="font-label-md text-label-md text-on-primary dark:text-on-primary-container hover:text-secondary-fixed transition-colors duration-200" href="profil.html">Profile</a>
+                <a class="font-label-md text-label-md text-on-primary dark:text-on-primary-container hover:text-secondary-fixed transition-colors duration-200" href="program-studi.html">Program Studi</a>
+                <a class="font-label-md text-label-md text-on-primary dark:text-on-primary-container hover:text-secondary-fixed transition-colors duration-200" href="pmb.html">PMB</a>
+                <a class="font-label-md text-label-md text-on-primary dark:text-on-primary-container hover:text-secondary-fixed transition-colors duration-200" href="portal-layanan.html">Portal Layanan</a>
+            </nav>
+            <div class="hidden md:flex items-center gap-4">
+                <button aria-label="Library" class="text-on-primary hover:bg-primary-container dark:hover:bg-surface-variant transition-colors duration-200 p-2 rounded-full scale-95 active:transition-transform">
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">library_books</span>
+                </button>
+                <button aria-label="Account" class="text-on-primary hover:bg-primary-container dark:hover:bg-surface-variant transition-colors duration-200 p-2 rounded-full scale-95 active:transition-transform">
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">account_balance</span>
+                </button>
+                <button class="font-label-md text-label-md bg-transparent border border-on-primary text-on-primary px-4 py-2 rounded scale-95 active:transition-transform hover:bg-primary-container">
+                    Login
+                </button>
+                <a href="pmb.html" class="font-label-md text-label-md bg-secondary text-primary px-4 py-2 rounded font-bold scale-95 active:transition-transform hover:bg-secondary-fixed-dim transition-colors flex items-center justify-center">
+                    Apply Now
+                </a>
+            </div>
+            <button id="mobile-menu-toggle" aria-label="Menu" class="md:hidden text-on-primary p-2 focus:outline-none">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </div>
+    </header>
 
-<!-- ============================= TOPBAR ============================= -->
-<div class="topbar">
-  <div class="container">
-    <div class="topbar-links">
-      <a href="tel:+6281234567890"><span>Tel</span>+62 812-3456-7890</a>
-      <a href="mailto:info@stisipbgp.ac.id"><span>Email</span>info@stisipbgp.ac.id</a>
-    </div>
-    <div class="topbar-links">
-      <a href="#" target="_blank" rel="noopener">Portal SIAKAD</a>
-      <a href="pmb.html">PMB 2026/2027</a>
-    </div>
-  </div>
-</div>
-
-<!-- ============================= HEADER ============================= -->
-<header class="site-header">
-  <div class="container">
-    <a href="index.html" class="brand">
-      <span class="brand-mark">
-        <svg viewBox="0 0 24 24" fill="none" stroke="#0B2545" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/><path d="M22 10v6"/></svg>
-      </span>
-      <span class="brand-text">
-        <strong>STISIP Bina Generasi</strong>
-        <span>Polewali Mandar</span>
-      </span>
-    </a>
-
-    <nav aria-label="Navigasi utama">
-      <ul class="nav" data-nav>
-        <li><a href="index.html">Beranda</a></li>
-        <li><a href="profil.html">Profil</a></li>
-        <li class="has-dropdown">
-          <button class="nav-toggle" aria-expanded="false">Program Studi
-            <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 4l4 4 4-4"/></svg>
-          </button>
-          <div class="dropdown">
-            <a href="program-studi-ian.html">S1 Ilmu Administrasi Negara<small>Kurikulum, prospek kerja &amp; dosen</small></a>
-            <a href="program-studi-ip.html">S1 Ilmu Pemerintahan<small>Kurikulum, prospek kerja &amp; dosen</small></a>
-          </div>
-        </li>
-        <li><a href="pmb.html">PMB</a></li>
-        <li class="has-dropdown">
-          <button class="nav-toggle" aria-expanded="false">Layanan
-            <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 4l4 4 4-4"/></svg>
-          </button>
-          <div class="dropdown">
-            <a href="layanan.html#lpm">Dokumen Mutu (SPMI/SOP) LPM</a>
-            <a href="layanan.html#lppm">Jurnal Penelitian LPPM</a>
-            <a href="layanan.html#siakad">Portal Akademik SIAKAD/Lontara</a>
-            <a href="layanan.html#kemahasiswaan">Kemahasiswaan</a>
-            <a href="layanan.html#kip">Beasiswa KIP-Kuliah</a>
-          </div>
-        </li>
-        <li><a href="kontak.html">Kontak</a></li>
-        <li class="header-cta" style="margin-left:8px;"><a href="pmb.html" class="cta-btn">Daftar Sekarang</a></li>
-      </ul>
-    </nav>
-
-    <button class="menu-toggle" data-menu-toggle aria-label="Buka menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</header>
-
-<!-- ============================= HERO ============================= -->
-<section class="hero">
-  <div class="container">
-    <div class="hero-copy">
-      <span class="hero-eyebrow">Penerimaan Mahasiswa Baru 2026/2027 Dibuka</span>
-      <h1>Membentuk <em>generasi pemimpin</em> sosial &amp; politik dari Polewali Mandar</h1>
-      <p class="lede">STISIP Bina Generasi Polewali mendidik calon administrator publik dan penggerak pemerintahan yang kompeten, berintegritas, dan siap melayani masyarakat Sulawesi Barat dan sekitarnya.</p>
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="https://wa.me/6281234567890?text=Halo%20Admin%20PMB%2C%20saya%20ingin%20mendaftar%20sebagai%20mahasiswa%20baru%20di%20STISIP%20Bina%20Generasi%20Polewali." target="_blank" rel="noopener">
-          Daftar Sekarang
-          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
-        </a>
-        <a class="btn btn-outline" href="pmb.html#brosur">Unduh Brosur PDF</a>
-      </div>
-      <div class="hero-stats">
-        <div><strong>2</strong><span>Program Studi S1</span></div>
-        <div><strong>B</strong><span>Akreditasi BAN-PT</span></div>
-        <div><strong>1998</strong><span>Tahun Berdiri</span></div>
-        <div><strong>1.200+</strong><span>Alumni Tersebar</span></div>
-      </div>
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="fixed inset-0 z-50 translate-x-full transition-transform duration-300 ease-in-out md:hidden" aria-hidden="true">
+        <!-- Overlay -->
+        <div id="mobile-menu-overlay" class="absolute inset-0 bg-primary/60 backdrop-blur-sm"></div>
+        <!-- Drawer Content -->
+        <div class="absolute right-0 top-0 bottom-0 w-64 bg-primary dark:bg-primary-container text-on-primary p-6 flex flex-col gap-6 shadow-xl z-10">
+            <div class="flex items-center justify-between">
+                <span class="font-display-lg text-[20px] font-bold text-on-primary tracking-tight">Menu</span>
+                <button id="mobile-menu-close" aria-label="Close Menu" class="text-on-primary p-1 rounded-full hover:bg-primary-container">
+                    <span class="material-symbols-outlined">close</span>
+                </button>
+            </div>
+            <nav class="flex flex-col gap-4 mt-4">
+                <a class="font-label-md text-label-md py-2 border-b border-on-primary/10 transition-colors hover:text-secondary" href="profil.html">Profile</a>
+                <a class="font-label-md text-label-md py-2 border-b border-on-primary/10 transition-colors hover:text-secondary" href="program-studi.html">Program Studi</a>
+                <a class="font-label-md text-label-md py-2 border-b border-on-primary/10 transition-colors hover:text-secondary" href="pmb.html">PMB</a>
+                <a class="font-label-md text-label-md py-2 border-b border-on-primary/10 transition-colors hover:text-secondary" href="portal-layanan.html">Portal Layanan</a>
+            </nav>
+            <div class="mt-auto flex flex-col gap-4">
+                <button class="w-full font-label-md text-label-md bg-transparent border border-on-primary text-on-primary py-3 rounded hover:bg-primary-container">
+                    Login
+                </button>
+                <a href="pmb.html" class="w-full font-label-md text-label-md bg-secondary text-primary py-3 rounded font-bold hover:bg-secondary-fixed-dim transition-colors text-center">
+                    Apply Now
+                </a>
+            </div>
+        </div>
     </div>
 
-    <div class="hero-panel">
-      <div class="slider" data-slider>
-        <div class="slide is-active">
-          <div class="slide-bg" style="background:linear-gradient(155deg,#1a4380,#0b2545 70%);"></div>
-          <div class="slide-content">
-            <span class="tag">Kampus</span>
-            <h3>Kampus di Jantung Polewali Mandar</h3>
-            <p>Lingkungan belajar yang asri di Jl. Mr. Muh. Yamin, Manding.</p>
-          </div>
-        </div>
-        <div class="slide">
-          <div class="slide-bg" style="background:linear-gradient(155deg,#a81d31,#0b2545 75%);"></div>
-          <div class="slide-content">
-            <span class="tag">Wisuda</span>
-            <h3>Melepas Lulusan Siap Kerja</h3>
-            <p>Ratusan sarjana Administrasi Negara &amp; Pemerintahan diwisuda tiap tahun.</p>
-          </div>
-        </div>
-        <div class="slide">
-          <div class="slide-bg" style="background:linear-gradient(155deg,#2568b3,#081b34 75%);"></div>
-          <div class="slide-content">
-            <span class="tag">Kemahasiswaan</span>
-            <h3>Aktif Berorganisasi &amp; Berkarya</h3>
-            <p>BEM, UKM, dan kegiatan pengabdian masyarakat sepanjang tahun.</p>
-          </div>
-        </div>
-        <div class="slide-dots" data-slider-dots></div>
-      </div>
-    </div>
-  </div>
-</section>
-<div class="woven-rule"></div>
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="relative h-[80vh] min-h-[600px] w-full flex items-center justify-center">
+            <div class="absolute inset-0 bg-cover bg-center w-full h-full" data-alt="A sweeping, majestic wide-angle photograph of the STISIP BIKES main university campus building at dusk. The architecture is a blend of modern glass and traditional authoritative stone, illuminated warmly against a deep blue evening sky. Lush, perfectly manicured green lawns foreground the structure. The lighting creates a dignified, prestigious, and welcoming academic sanctuary atmosphere." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBDCR8BjMsBCzAS-VxZ_9zDbeAx1k5VvFqtNl-e5uChg1viSi75aQvCD3mlNQjCVPB0lVvv3lOLZnBVvK7Vtgk6c5aTClBf4HWSkAaZbteJJ9LJl60x3FCUW8U8YAJSLkkDNkV-W82lKS9vB4SJ5qVppHpEfmvngnzQMCBQE8ss4lZvm6Ggd81_eiS6cijYDtdKo-Qsl_wj3vfx-Z_U_ult6euG2mxXpRhEmMT-Qf8UPYp8boYfdIM')"></div>
+            <div class="absolute inset-0 hero-overlay"></div>
+            <div class="relative z-10 w-full max-w-container-max px-gutter mx-auto text-center md:text-left flex flex-col items-center md:items-start gap-6">
+                <h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-primary max-w-3xl leading-tight">
+                    Sanctuary of Academic Excellence and Future Leadership
+                </h1>
+                <p class="font-body-lg text-body-lg text-on-primary/90 max-w-2xl">
+                    Discover a rigorous intellectual environment dedicated to shaping visionary leaders through innovative research, comprehensive study programs, and a commitment to societal progress.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 mt-4">
+                    <a href="program-studi.html" class="font-label-md text-label-md bg-secondary text-primary px-8 py-3 rounded font-bold hover:bg-secondary-fixed-dim transition-colors inline-block text-center">
+                        Pelajari Program Studi
+                    </a>
+                    <a href="pmb.html" class="font-label-md text-label-md bg-transparent border border-on-primary text-on-primary px-8 py-3 rounded hover:bg-primary/20 transition-colors inline-block text-center">
+                        Daftar Sekarang
+                    </a>
+                </div>
+            </div>
+        </section>
 
-<!-- ============================= TENTANG SINGKAT ============================= -->
-<section class="section">
-  <div class="container two-col">
-    <div class="reveal">
-      <span class="eyebrow">Tentang Kampus</span>
-      <h2>Sekolah tinggi ilmu sosial &amp; politik dengan akar lokal, wawasan nasional</h2>
-      <p>STISIP Bina Generasi Polewali hadir untuk menjawab kebutuhan sumber daya manusia di bidang tata kelola pemerintahan dan administrasi publik di Sulawesi Barat. Kami memadukan kurikulum berbasis kompetensi dengan praktik lapangan bersama instansi pemerintah dan lembaga masyarakat.</p>
-      <p>Dengan dosen berpengalaman dan fasilitas penunjang perkuliahan, mahasiswa dibekali kemampuan analisis kebijakan, tata kelola pemerintahan, hingga manajemen pelayanan publik yang aplikatif.</p>
-      <a class="btn btn-navy" href="profil.html">Selengkapnya Tentang Kami
-        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
-      </a>
-    </div>
-    <div class="reveal">
-      <div class="letterhead" data-doc="Profil Institusi">
-        <h3>Visi Institusi</h3>
-        <p>Menjadi perguruan tinggi ilmu sosial dan politik unggul di kawasan Sulawesi Barat yang menghasilkan lulusan berdaya saing, berintegritas, dan berorientasi pada pelayanan publik pada tahun 2035.</p>
-        <div class="divider-lg" style="margin:22px 0;"></div>
-        <div style="display:flex;align-items:center;gap:18px;">
-          <div class="seal">
-            <strong>BAN-PT</strong>
-            <span>Terakreditasi</span>
-          </div>
-          <div>
-            <span class="badge-accredited">
-              <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1l1.9 4.3 4.6.4-3.5 3.1 1.1 4.6L8 11l-4.1 2.4 1.1-4.6L1.5 5.7l4.6-.4L8 1z"/></svg>
-              Institusi &amp; Program Studi Terakreditasi
-            </span>
-            <p style="margin-top:10px;font-size:.85rem;">Lihat sertifikat lengkap di halaman Profil.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+        <!-- Stats Section -->
+        <section class="w-full bg-surface-container py-12 border-b border-outline-variant/30">
+            <div class="max-w-container-max px-gutter mx-auto">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x divide-outline-variant/30">
+                    <div class="flex flex-col items-center">
+                        <span class="font-display-lg text-display-lg text-primary">5,000+</span>
+                        <span class="font-label-md text-label-md text-on-surface-variant mt-2">Mahasiswa Aktif</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <span class="font-display-lg text-display-lg text-primary">200+</span>
+                        <span class="font-label-md text-label-md text-on-surface-variant mt-2">Dosen Ahli</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <span class="font-display-lg text-display-lg text-primary">25,000+</span>
+                        <span class="font-label-md text-label-md text-on-surface-variant mt-2">Alumni Sukses</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <span class="font-display-lg text-display-lg text-primary">15</span>
+                        <span class="font-label-md text-label-md text-on-surface-variant mt-2">Program Studi</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<!-- ============================= PROGRAM STUDI ============================= -->
-<section class="section section-tint">
-  <div class="container">
-    <div class="section-head center reveal">
-      <span class="eyebrow" style="justify-content:center;">Program Studi</span>
-      <h2>Dua jalur keilmuan, satu tujuan: tata kelola publik yang baik</h2>
-      <p>Pilih program studi yang sesuai dengan minat karier Anda di bidang pemerintahan dan administrasi publik.</p>
-    </div>
-    <div class="grid grid-2">
-      <div class="card reveal">
-        <div class="icon-badge">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 9h1M9 13h1M14 9h1M14 13h1M9 21v-4h6v4"/></svg>
-        </div>
-        <h3>S1 Ilmu Administrasi Negara</h3>
-        <p>Membekali mahasiswa dengan kompetensi perancangan kebijakan publik, manajemen birokrasi, dan pelayanan administrasi pemerintahan modern.</p>
-        <a class="btn btn-ghost" style="margin-top:14px;" href="program-studi-ian.html">Lihat Detail Program</a>
-      </div>
-      <div class="card reveal">
-        <div class="icon-badge">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 2 7l10 5 10-5-10-5Z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-        </div>
-        <h3>S1 Ilmu Pemerintahan</h3>
-        <p>Mengkaji dinamika politik lokal, otonomi daerah, dan tata kelola pemerintahan desa hingga kabupaten secara komprehensif.</p>
-        <a class="btn btn-ghost" style="margin-top:14px;" href="program-studi-ip.html">Lihat Detail Program</a>
-      </div>
-    </div>
-  </div>
-</section>
+        <!-- Academic Programs (Bento Grid) -->
+        <section class="py-section-padding-mobile md:py-section-padding-desktop px-gutter max-w-container-max mx-auto">
+            <div class="flex justify-between items-end mb-12">
+                <div>
+                    <h2 class="font-headline-md text-headline-md text-primary mb-2">Program Unggulan</h2>
+                    <p class="font-body-md text-body-md text-on-surface-variant">Kurikulum yang dirancang untuk tantangan global masa depan.</p>
+                </div>
+                <a href="program-studi.html" class="hidden md:flex items-center gap-2 font-label-md text-label-md text-primary hover:text-secondary transition-colors">
+                    Lihat Semua Program <span class="material-symbols-outlined">arrow_forward</span>
+                </a>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Large Card -->
+                <div class="md:col-span-2 group relative overflow-hidden rounded-xl border border-outline-variant bg-surface hover:shadow-sm transition-all duration-300 min-h-[320px] flex flex-col justify-end p-8">
+                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105 opacity-20" data-alt="A bright, modern university classroom setting showing students engaged in a dynamic discussion. The room features state-of-the-art academic technology, sleek furniture, and large windows letting in abundant natural daylight. The overall tone is intellectual, focused, and collaborative, strictly adhering to the corporate modern aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAJ5ZKmT0ccyL8m3NUS86fLgrd1r_PFBHmzSEMYuGdpqUrYPSvyM9n3Md42HBCFcp-ueqYat3ZYZkWJLr2XMWI3XIQG3cVixNyR5Lcsum_TPR7kJ-P169rHY1l5aHir3tv1m-B4z7wkwp5lxEWitvYMs1u_bHPu1z3hEqRB0RVOkxfKT5zdyIBwAB_wz3f1qx7ciN4eeCllSLRwwQOv32JkI8zQPLOFJWndv1jevQF9Jeicsu8vQwY')"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-primary to-transparent opacity-90"></div>
+                    <div class="relative z-10 text-on-primary">
+                        <span class="material-symbols-outlined text-[48px] mb-4 text-secondary">public</span>
+                        <h3 class="font-headline-sm text-headline-sm mb-2">Ilmu Pemerintahan (S1)</h3>
+                        <p class="font-body-md text-body-md text-on-primary/80 max-w-md">Membentuk analis kebijakan dan pemimpin sektor publik yang berintegritas tinggi dengan pendekatan studi empiris dan praktis.</p>
+                    </div>
+                </div>
+                <!-- Small Cards -->
+                <div class="flex flex-col gap-6">
+                    <div class="group border border-outline-variant rounded-xl p-6 bg-surface hover:shadow-sm transition-all duration-300 h-full flex flex-col">
+                        <span class="material-symbols-outlined text-[32px] text-primary mb-4">corporate_fare</span>
+                        <h3 class="font-headline-sm text-headline-sm text-primary mb-2">Administrasi Bisnis</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant flex-grow">Mencetak wirausahawan inovatif dengan pemahaman manajerial strategis.</p>
+                        <a class="mt-4 font-label-md text-label-md text-secondary inline-flex items-center gap-1 group-hover:gap-2 transition-all" href="program-studi.html">Detail Program <span class="material-symbols-outlined text-[16px]">arrow_forward</span></a>
+                    </div>
+                    <a href="program-studi.html" class="group border border-outline-variant rounded-xl p-6 bg-surface-container-low hover:bg-surface-container transition-all duration-300 h-full flex flex-col justify-center items-center text-center cursor-pointer">
+                        <span class="material-symbols-outlined text-[40px] text-primary mb-2">add_circle</span>
+                        <span class="font-label-md text-label-md text-primary">Jelajahi Fakultas Lainnya</span>
+                    </a>
+                </div>
+            </div>
+        </section>
 
-<!-- ============================= BERITA ============================= -->
-<section class="section">
-  <div class="container">
-    <div class="section-head reveal" style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;max-width:none;">
-      <div>
-        <span class="eyebrow">Berita &amp; Pengumuman</span>
-        <h2 style="margin-bottom:0;">Kabar terbaru dari kampus</h2>
-      </div>
-      <a class="btn btn-ghost" href="pmb.html">Semua Pengumuman</a>
-    </div>
-    <div class="grid grid-3" style="margin-top:12px;">
-      <article class="news-card reveal">
-        <div class="news-thumb" style="background:linear-gradient(155deg,#1a4380,#0b2545 75%);">
-          <span class="date-chip">02 Agu 2026</span>
-        </div>
-        <div class="news-body">
-          <span class="cat">Pengumuman PMB</span>
-          <h3>Pendaftaran Gelombang 2 Resmi Dibuka</h3>
-          <p>Calon mahasiswa baru dapat mendaftar mulai sekarang dengan potongan biaya pendaftaran awal.</p>
-          <a class="read-more" href="pmb.html">Baca selengkapnya
-            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
-          </a>
-        </div>
-      </article>
-      <article class="news-card reveal">
-        <div class="news-thumb" style="background:linear-gradient(155deg,#a81d31,#0b2545 75%);">
-          <span class="date-chip">27 Jul 2026</span>
-        </div>
-        <div class="news-body">
-          <span class="cat">Kemahasiswaan</span>
-          <h3>Pelantikan Pengurus BEM Periode 2026/2027</h3>
-          <p>Serah terima jabatan pengurus Badan Eksekutif Mahasiswa berlangsung khidmat di aula kampus.</p>
-          <a class="read-more" href="layanan.html#kemahasiswaan">Baca selengkapnya
-            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
-          </a>
-        </div>
-      </article>
-      <article class="news-card reveal">
-        <div class="news-thumb" style="background:linear-gradient(155deg,#2568b3,#081b34 75%);">
-          <span class="date-chip">15 Jul 2026</span>
-        </div>
-        <div class="news-body">
-          <span class="cat">Beasiswa</span>
-          <h3>Info Beasiswa KIP-Kuliah Tahun Akademik Baru</h3>
-          <p>Simak syarat dan alur pengajuan Beasiswa KIP-Kuliah bagi mahasiswa baru dan aktif.</p>
-          <a class="read-more" href="layanan.html#kip">Baca selengkapnya
-            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
-          </a>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
+        <!-- News & Events Section -->
+        <section class="bg-surface-bright py-section-padding-mobile md:py-section-padding-desktop border-t border-outline-variant/30">
+            <div class="max-w-container-max px-gutter mx-auto">
+                <h2 class="font-headline-md text-headline-md text-primary mb-12 text-center">Kabar Terkini Kampus</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- News Card 1 -->
+                    <article class="bg-surface border border-outline-variant rounded-lg overflow-hidden flex flex-col group">
+                        <div class="h-48 overflow-hidden">
+                            <img alt="Seminar Nasional" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A high-quality image of an academic seminar taking place in a modern university auditorium. A distinguished speaker is at the podium, and the audience consists of attentive students and faculty. The lighting is bright and professional, highlighting the serious, intellectual atmosphere of the event." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqTvNFLrijK8TgDZDM9ogoo_235_qoTOG-DTKIlEUiFbj6qHhdpsOt0ZiRbcwMt8Ubm11qMeYvxp2l09pGsU1Qt7mG_XbDWH4RhRgcirHzfOPk32hZmVSJIJ9o6G8XKVMWIt0Ryzz714Fc-A4Lh0F2IdhVB4l3h80fH0tei1nFo84ze5OIwrRhOlg2Q8ThDgQTefljk0B-31AQbiOY-WydSJcUCAcAcORL-Coa7fWCCaNy2Xpyvcc"/>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <span class="inline-block bg-secondary-container text-on-secondary-container font-label-md text-[10px] uppercase tracking-wider px-2 py-1 rounded w-max mb-3">Seminar Nasional</span>
+                            <h3 class="font-headline-sm text-[20px] text-primary mb-3">STISIP BIKES Gelar Simposium Kebijakan Publik 2024</h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant mb-4 flex-grow line-clamp-3">Menghadirkan pakar kebijakan terkemuka untuk membahas arah strategis tata kelola pemerintahan di era digital.</p>
+                            <a class="font-label-md text-label-md text-secondary inline-flex items-center gap-1 group-hover:text-primary transition-colors" href="#">Baca Selengkapnya <span class="material-symbols-outlined text-[16px]">arrow_forward</span></a>
+                        </div>
+                    </article>
+                    <!-- News Card 2 -->
+                    <article class="bg-surface border border-outline-variant rounded-lg overflow-hidden flex flex-col group">
+                        <div class="h-48 overflow-hidden">
+                            <img alt="Pengabdian Masyarakat" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A photograph showing university students engaged in a community service project, planting trees in an urban park. They are wearing casual campus apparel. The mood is optimistic and collaborative, shot with natural sunlight creating a bright, uplifting, and responsible institutional narrative." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWsFY5Dp2gLh37suSBbkjyhHnqOeMCYEvPQTD5Agx0xHlzipBE9s02isNw6UohaS6IWSDJRY5IadFdxobZ_9MYReaggeT2TU9teB-kjTWdw3qg5ObBZP5-w_QqHS2ozmIgD8zcF7eQpZdPpXJcW5qdzUfdPl4kWzK3nO34W92DXIQhFg5NYolUk9loZKGq31Ls7R7-j0xSbj6FgbkzdZodJ9hc3GdTeqSMJ_JsX0uirfNkm5au_f0"/>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <span class="inline-block bg-secondary-container text-on-secondary-container font-label-md text-[10px] uppercase tracking-wider px-2 py-1 rounded w-max mb-3">Pengabdian Masyarakat</span>
+                            <h3 class="font-headline-sm text-[20px] text-primary mb-3">Mahasiswa Berkontribusi dalam Program Desa Binaan</h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant mb-4 flex-grow line-clamp-3">Inisiatif nyata dari mahasiswa untuk memberdayakan ekonomi lokal melalui pendampingan UMKM berbasis teknologi.</p>
+                            <a class="font-label-md text-label-md text-secondary inline-flex items-center gap-1 group-hover:text-primary transition-colors" href="#">Baca Selengkapnya <span class="material-symbols-outlined text-[16px]">arrow_forward</span></a>
+                        </div>
+                    </article>
+                    <!-- Events List (Asymmetric Layout) -->
+                    <div class="flex flex-col gap-4">
+                        <h3 class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest mb-2 border-b border-outline-variant pb-2">Agenda Mendatang</h3>
+                        <div class="flex gap-4 p-4 rounded bg-surface hover:bg-surface-container-low transition-colors border border-transparent hover:border-outline-variant">
+                            <div class="flex flex-col items-center justify-center bg-primary text-on-primary rounded p-2 min-w-[60px]">
+                                <span class="font-headline-sm text-headline-sm leading-none">15</span>
+                                <span class="font-caption text-caption uppercase mt-1">Okt</span>
+                            </div>
+                            <div>
+                                <h4 class="font-label-md text-label-md text-primary">Penerimaan Mahasiswa Baru Gelombang II</h4>
+                                <span class="font-caption text-caption text-on-surface-variant flex items-center gap-1 mt-1"><span class="material-symbols-outlined text-[14px]">schedule</span> 08:00 - Selesai</span>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 p-4 rounded bg-surface hover:bg-surface-container-low transition-colors border border-transparent hover:border-outline-variant">
+                            <div class="flex flex-col items-center justify-center bg-primary text-on-primary rounded p-2 min-w-[60px]">
+                                <span class="font-headline-sm text-headline-sm leading-none">22</span>
+                                <span class="font-caption text-caption uppercase mt-1">Okt</span>
+                            </div>
+                            <div>
+                                <h4 class="font-label-md text-label-md text-primary">Sidang Terbuka Senat Akademik</h4>
+                                <span class="font-caption text-caption text-on-surface-variant flex items-center gap-1 mt-1"><span class="material-symbols-outlined text-[14px]">location_on</span> Aula Utama Kampus</span>
+                            </div>
+                        </div>
+                        <a class="mt-auto font-label-md text-label-md text-primary border border-primary text-center py-3 rounded hover:bg-primary hover:text-on-primary transition-colors" href="#">Lihat Kalender Akademik</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-<!-- ============================= CTA STRIP ============================= -->
-<section class="section" style="padding-top:0;">
-  <div class="container">
-    <div class="cta-strip reveal">
-      <div>
-        <h2>Siap bergabung dengan STISIP Bina Generasi Polewali?</h2>
-        <p>Tim admin PMB siap membantu proses pendaftaran Anda melalui WhatsApp.</p>
-      </div>
-      <a class="btn btn-outline" style="border-color:#fff;" href="https://wa.me/6281234567890?text=Halo%20Admin%20PMB%2C%20saya%20ingin%20bertanya%20seputar%20pendaftaran." target="_blank" rel="noopener">
-        Chat Admin PMB
-        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ============================= FOOTER ============================= -->
-<footer class="site-footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-col">
-        <div class="footer-brand">
-          <span class="brand-mark">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#0B2545" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/><path d="M22 10v6"/></svg>
-          </span>
-          <strong>STISIP Bina Generasi<br>Polewali</strong>
+    <!-- Footer (Shared Component) -->
+    <footer aria-label="Site Footer" class="bg-primary dark:bg-surface-container-highest w-full py-section-padding-desktop px-gutter flex flex-col md:flex-row justify-between items-start max-w-container-max mx-auto border-t border-outline-variant full-width bottom-0 mt-20">
+        <div class="flex flex-col gap-6 mb-8 md:mb-0 max-w-xs">
+            <span class="font-headline-md text-headline-md font-bold text-on-primary">STISIP BIKES</span>
+            <p class="font-body-md text-body-md text-secondary dark:text-secondary-fixed-dim">Sanctuary of Academic Excellence.</p>
+            <div class="flex gap-4 opacity-80 hover:opacity-100 transition-opacity">
+                <a aria-label="Facebook" class="text-on-primary hover:text-secondary dark:hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">qr_code_2</span></a>
+                <a aria-label="Twitter" class="text-on-primary hover:text-secondary dark:hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
+                <a aria-label="LinkedIn" class="text-on-primary hover:text-secondary dark:hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">work</span></a>
+            </div>
         </div>
-        <address>Jl. Mr. Muh. Yamin No. 195, Manding,<br>Polewali Mandar, Sulawesi Barat</address>
-        <p>Tel: +62 812-3456-7890<br>Email: info@stisipbgp.ac.id</p>
-        <div class="social-row">
-          <a href="#" aria-label="Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
-          <a href="#" aria-label="Facebook" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M15 8h2V4h-2a4 4 0 0 0-4 4v2H9v4h2v6h4v-6h2.5l.5-4H15V8Z"/></svg></a>
-          <a href="#" aria-label="YouTube" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="6" width="20" height="12" rx="4"/><path d="M10.5 9.5v5l4.5-2.5-4.5-2.5Z" fill="currentColor" stroke="none"/></svg></a>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-16 w-full md:w-auto">
+            <div class="flex flex-col gap-4">
+                <h4 class="font-label-md text-label-md text-on-primary">Institusi</h4>
+                <a class="font-body-md text-body-md text-on-primary dark:text-on-surface-variant hover:text-secondary dark:hover:text-primary transition-colors" href="profil.html">Tentang Kampus</a>
+                <a class="font-body-md text-body-md text-on-primary dark:text-on-surface-variant hover:text-secondary dark:hover:text-primary transition-colors" href="profil.html#sejarah">Pimpinan</a>
+                <a class="font-body-md text-body-md text-on-primary dark:text-on-surface-variant hover:text-secondary dark:hover:text-primary transition-colors" href="#">Karir</a>
+            </div>
+            <div class="flex flex-col gap-4">
+                <h4 class="font-label-md text-label-md text-on-primary">Tautan Cepat</h4>
+                <a class="font-body-md text-body-md text-on-primary dark:text-on-surface-variant hover:text-secondary dark:hover:text-primary transition-colors" href="#">Directory</a>
+                <a class="font-body-md text-body-md text-on-primary dark:text-on-surface-variant hover:text-secondary dark:hover:text-primary transition-colors" href="#">Campus Map</a>
+                <a class="font-body-md text-body-md text-on-primary dark:text-on-surface-variant hover:text-secondary dark:hover:text-primary transition-colors" href="#">Career Center</a>
+                <a class="font-body-md text-body-md text-on-primary dark:text-on-surface-variant hover:text-secondary dark:hover:text-primary transition-colors" href="#">Alumni</a>
+            </div>
+            <div class="flex flex-col gap-4 col-span-2 md:col-span-1">
+                <h4 class="font-label-md text-label-md text-on-primary">Legal</h4>
+                <a class="font-body-md text-body-md text-on-primary dark:text-on-surface-variant hover:text-secondary dark:hover:text-primary transition-colors" href="#">Privacy Policy</a>
+            </div>
         </div>
-      </div>
-      <div class="footer-col">
-        <h4>Tautan Cepat</h4>
-        <ul>
-          <li><a href="pmb.html">Pendaftaran PMB Online</a></li>
-          <li><a href="layanan.html#siakad">Portal SIAKAD</a></li>
-          <li><a href="layanan.html#lpm">Dokumen Mutu LPM</a></li>
-          <li><a href="layanan.html#elibrary">E-Library</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Halaman</h4>
-        <ul>
-          <li><a href="profil.html">Profil Institusi</a></li>
-          <li><a href="program-studi-ian.html">Prodi Administrasi Negara</a></li>
-          <li><a href="program-studi-ip.html">Prodi Ilmu Pemerintahan</a></li>
-          <li><a href="kontak.html">Kontak &amp; Lokasi</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>&copy; <span data-year>2026</span> STISIP Bina Generasi Polewali. Seluruh hak cipta dilindungi.</span>
-      <span>Dibangun sebagai website statis — HTML · CSS · JavaScript</span>
-    </div>
-  </div>
-</footer>
-
-<a class="wa-float" href="https://wa.me/6281234567890?text=Halo%20Admin%20PMB%2C%20saya%20ingin%20bertanya." target="_blank" rel="noopener" aria-label="Chat WhatsApp Admin PMB">
-  <span class="ping"></span>
-  <svg viewBox="0 0 24 24" fill="currentColor" style="position:relative;"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.87.51 3.63 1.4 5.14L2 22l5.12-1.5a9.87 9.87 0 0 0 4.92 1.31h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2Zm5.79 14.02c-.24.68-1.4 1.3-1.93 1.35-.5.05-.94.24-3.17-.66-2.68-1.1-4.4-3.83-4.53-4-.13-.17-1.06-1.42-1.06-2.7 0-1.29.68-1.92.92-2.18.24-.26.53-.32.7-.32.18 0 .35 0 .5.01.16.01.38-.06.6.45.24.56.79 1.94.86 2.08.07.14.12.3.02.48-.1.18-.14.29-.28.45-.14.16-.29.35-.42.47-.14.13-.28.28-.12.55.16.27.71 1.17 1.53 1.89 1.05.94 1.94 1.23 2.21 1.37.27.14.43.12.58-.07.16-.19.68-.79.86-1.06.18-.27.36-.22.6-.13.24.09 1.52.72 1.78.85.26.13.43.19.5.3.06.11.06.63-.18 1.31Z"/></svg>
-</a>
-
-<script src="js/main.js"></script>
+        <div class="w-full mt-12 pt-8 border-t border-outline-variant/30 text-center md:text-left text-on-primary/60 font-caption text-caption">
+            © 2024 STISIP BIKES. All Rights Reserved. Sanctuary of Academic Excellence.
+        </div>
+    </footer>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
