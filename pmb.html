@@ -1,23 +1,34 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Penerimaan Mahasiswa Baru - STISIP BIKES</title>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-    <link href="assets/css/styles.css" rel="stylesheet"/>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&amp;family=Inter:wght@400;600&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link href="assets/css/styles.css" rel="stylesheet" />
 </head>
+
 <body class="bg-background text-on-background font-body-md text-body-md antialiased">
     <!-- TopNavBar (Shared Component) -->
-    <header aria-label="Main Navigation" class="shadow-md docked full-width top-0 fixed w-full z-50 flex flex-col items-center px-gutter max-w-container-max mx-auto h-[78px] justify-center left-0 right-0 header-site">
+    <header aria-label="Main Navigation"
+        class="shadow-md docked full-width top-0 fixed w-full z-50 flex flex-col items-center px-gutter max-w-container-max mx-auto h-[78px] justify-center left-0 right-0 header-site">
         <div class="w-full max-w-container-max flex items-center justify-between">
             <a href="index.html" class="flex items-center gap-3 hover:opacity-90 transition-opacity site-logo">
-                <img alt="Logo STISIP Bina Generasi Polewali" class="h-12 w-auto object-contain" src="img/LOGO STISIP.png"/>
+                <img alt="Logo STISIP Bina Generasi Polewali" class="h-12 w-auto object-contain"
+                    src="img/LOGO STISIP.png" />
                 <div class="flex flex-col">
-                    <span class="brand-title font-display-lg text-[18px] md:text-[20px] font-bold text-on-primary tracking-tight leading-tight">STISIP Bina Generasi</span>
-                    <span class="text-[11px] text-secondary font-semibold tracking-wider uppercase">Polewali Mandar</span>
+                    <span
+                        class="brand-title font-display-lg text-[18px] md:text-[20px] font-bold text-on-primary tracking-tight leading-tight">STISIP
+                        Bina Generasi</span>
+                    <span class="text-[11px] text-secondary font-semibold tracking-wider uppercase">Polewali
+                        Mandar</span>
                 </div>
             </a>
             <nav aria-label="Desktop Navigation" class="hidden md:flex items-center gap-7">
@@ -28,7 +39,8 @@
                 <a class="nav-link-custom" href="portal-layanan.html">Portal Layanan</a>
             </nav>
             <div class="hidden md:flex items-center gap-4">
-                <a href="pmb.html" class="btn btn-sm btn-primary-custom px-5 py-2.5 rounded font-bold scale-95 active:transition-transform hover:bg-secondary-fixed-dim transition-colors flex items-center justify-center shadow-md">
+                <a href="pmb.html"
+                    class="btn btn-sm btn-primary-custom px-5 py-2.5 rounded font-bold scale-95 active:transition-transform hover:bg-secondary-fixed-dim transition-colors flex items-center justify-center shadow-md">
                     Daftar PMB Online
                 </a>
             </div>
@@ -39,29 +51,39 @@
     </header>
 
     <!-- Mobile Navigation Drawer -->
-    <div id="mobile-menu" class="fixed inset-0 z-50 translate-x-full transition-transform duration-300 ease-in-out md:hidden" aria-hidden="true">
+    <div id="mobile-menu"
+        class="fixed inset-0 z-50 translate-x-full transition-transform duration-300 ease-in-out md:hidden"
+        aria-hidden="true">
         <!-- Overlay -->
         <div id="mobile-menu-overlay" class="absolute inset-0 bg-primary/80 backdrop-blur-sm"></div>
         <!-- Drawer Content -->
-        <div class="absolute right-0 top-0 bottom-0 w-72 bg-primary text-on-primary p-6 flex flex-col gap-6 shadow-xl z-10" style="background: linear-gradient(180deg, #001026 0%, #000a1e 100%);">
+        <div class="absolute right-0 top-0 bottom-0 w-72 bg-primary text-on-primary p-6 flex flex-col gap-6 shadow-xl z-10"
+            style="background: linear-gradient(180deg, #001026 0%, #000a1e 100%);">
             <div class="flex items-center justify-between border-b border-on-primary/10 pb-4">
                 <div class="flex items-center gap-2">
-                    <img alt="Logo STISIP" class="h-8 w-auto" src="img/LOGO STISIP.png"/>
+                    <img alt="Logo STISIP" class="h-8 w-auto" src="img/LOGO STISIP.png" />
                     <span class="font-display-lg text-[16px] font-bold text-on-primary">STISIP Bina Generasi</span>
                 </div>
-                <button id="mobile-menu-close" aria-label="Close Menu" class="text-on-primary p-1 rounded-full hover:bg-primary-container">
+                <button id="mobile-menu-close" aria-label="Close Menu"
+                    class="text-on-primary p-1 rounded-full hover:bg-primary-container">
                     <span class="material-symbols-outlined">close</span>
                 </button>
             </div>
             <nav class="flex flex-col gap-4 mt-2">
-                <a class="font-label-md text-label-md py-2 border-b border-on-primary/10 transition-colors hover:text-secondary" href="index.html">Beranda</a>
-                <a class="font-label-md text-label-md py-2 border-b border-on-primary/10 transition-colors hover:text-secondary" href="profil.html">Profil Kampus</a>
-                <a class="font-label-md text-label-md py-2 border-b border-on-primary/10 transition-colors hover:text-secondary" href="program-studi.html">Program Studi</a>
-                <a class="font-label-md text-label-md py-2 border-b border-on-primary/10 transition-colors text-secondary font-bold" href="pmb.html">PMB Online</a>
-                <a class="font-label-md text-label-md py-2 border-b border-on-primary/10 transition-colors hover:text-secondary" href="portal-layanan.html">Portal Layanan</a>
+                <a class="font-label-md text-label-md py-2 border-b border-on-primary/10 transition-colors hover:text-secondary"
+                    href="index.html">Beranda</a>
+                <a class="font-label-md text-label-md py-2 border-b border-on-primary/10 transition-colors hover:text-secondary"
+                    href="profil.html">Profil Kampus</a>
+                <a class="font-label-md text-label-md py-2 border-b border-on-primary/10 transition-colors hover:text-secondary"
+                    href="program-studi.html">Program Studi</a>
+                <a class="font-label-md text-label-md py-2 border-b border-on-primary/10 transition-colors text-secondary font-bold"
+                    href="pmb.html">PMB Online</a>
+                <a class="font-label-md text-label-md py-2 border-b border-on-primary/10 transition-colors hover:text-secondary"
+                    href="portal-layanan.html">Portal Layanan</a>
             </nav>
             <div class="mt-auto flex flex-col gap-4">
-                <a href="#formulir" class="w-full font-label-md text-label-md bg-secondary text-primary py-3 rounded font-bold hover:bg-secondary-fixed-dim transition-colors text-center shadow-md">
+                <a href="#formulir"
+                    class="w-full font-label-md text-label-md bg-secondary text-primary py-3 rounded font-bold hover:bg-secondary-fixed-dim transition-colors text-center shadow-md">
                     Daftar PMB Sekarang
                 </a>
             </div>
@@ -69,18 +91,29 @@
     </div>
 
     <!-- Hero Section -->
-    <section class="relative w-full h-[520px] md:h-[580px] flex items-center justify-center px-gutter">
+    <section class="relative w-full h-[520px] md:h-[580px] flex items-center justify-center px-gutter mt-5">
         <div class="absolute inset-0 z-0">
             <div class="w-full h-full bg-cover bg-center" style="background-image: url('img/foto kampus5.jpeg')"></div>
-            <div class="absolute inset-0 bg-primary/60 bg-gradient-to-t from-primary via-primary/70 to-transparent"></div>
+            <div class="absolute inset-0 bg-primary/60 bg-gradient-to-t from-primary via-primary/70 to-transparent">
+            </div>
         </div>
         <div class="relative z-10 max-w-container-max mx-auto w-full text-center flex flex-col items-center">
-            <span class="inline-block bg-secondary text-primary font-label-md text-[12px] font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-4 shadow-sm">Penerimaan Mahasiswa Baru T.A 2026/2027</span>
-            <h1 class="font-display-lg text-display-lg md:text-[56px] text-on-primary mb-6 drop-shadow-md">Pendaftaran Online STISIP Bina Generasi</h1>
-            <p class="font-body-lg text-body-lg text-on-primary/90 max-w-2xl mb-8">Wujudkan cita-cita Anda menjadi calon pimpinan birokrasi dan penggerak pembangunan daerah di STISIP Bina Generasi Polewali.</p>
+            <span
+                class="inline-block bg-secondary text-white font-label-md text-[12px] font-bold uppercase tracking-wider px-3 py-1 rounded-full mb-4 shadow-sm">Penerimaan
+                Mahasiswa Baru T.A 2026/2027</span>
+            <h1 class="font-display-lg text-display-lg md:text-[56px] text-on-primary mb-6 drop-shadow-md">Pendaftaran
+                Online STISIP Bina Generasi</h1>
+            <p class="font-body-lg text-white text-body-lg text-on-primary/90 max-w-2xl mb-8">Wujudkan cita-cita Anda
+                menjadi calon
+                pimpinan birokrasi dan penggerak pembangunan daerah di STISIP Bina Generasi Polewali.</p>
             <div class="flex flex-col sm:flex-row gap-4">
-                <a href="https://wa.me/6281234567890?text=Halo%20Admin%20PMB%2C%20saya%20ingin%20mendaftar%20di%20STISIP%20Bina%20Generasi%20Polewali" target="_blank" class="h-12 px-8 rounded bg-secondary text-primary font-label-md text-label-md font-bold hover:bg-secondary-fixed-dim transition-colors shadow-lg flex items-center justify-center">Daftar via WhatsApp</a>
-                <a href="program-studi.html" class="h-12 px-8 rounded bg-transparent border-2 border-on-primary text-on-primary font-label-md text-label-md font-bold hover:bg-on-primary/10 transition-colors flex items-center justify-center">Pilihan Program Studi</a>
+                <a href="https://wa.me/6281234567890?text=Halo%20Admin%20PMB%2C%20saya%20ingin%20mendaftar%20di%20STISIP%20Bina%20Generasi%20Polewali"
+                    target="_blank"
+                    class="h-12 px-5 rounded bg-secondary text-white font-label-md text-label-md font-bold hover:bg-secondary-fixed-dim transition-colors shadow-lg flex items-center justify-center">Daftar
+                    via WhatsApp</a>
+                <a href="program-studi.html"
+                    class="h-12 px-8 rounded bg-transparent border-2 border-on-primary text-on-primary font-label-md text-label-md font-bold hover:bg-on-primary/10 transition-colors flex items-center justify-center">Pilihan
+                    Program Studi</a>
             </div>
         </div>
     </section>
@@ -90,31 +123,42 @@
         <!-- Info Cards Bento Grid -->
         <section class="mb-section-padding-desktop">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="md:col-span-2 bg-surface rounded-xl border border-outline-variant p-8 flex flex-col justify-between hover:shadow-[0_2px_8px_rgba(0,0,0,0.04)] transition-shadow">
+                <div
+                    class="md:col-span-2 bg-surface rounded-xl border border-outline-variant p-8 flex flex-col justify-between hover:shadow-[0_2px_8px_rgba(0,0,0,0.04)] transition-shadow">
                     <div>
-                        <span class="material-symbols-outlined text-secondary text-4xl mb-4" data-weight="fill" style="font-variation-settings: 'FILL' 1;">school</span>
-                        <h2 class="font-headline-md text-headline-md text-on-surface mb-4">Pilihan Program Studi Sarjana (S1)</h2>
-                        <p class="font-body-md text-body-md text-on-surface-variant mb-6">STISIP Bina Generasi Polewali menyelenggarakan dua Program Studi S1 pilihan terakreditasi resmi BAN-PT.</p>
+                        <span class="material-symbols-outlined text-secondary text-4xl mb-4" data-weight="fill"
+                            style="font-variation-settings: 'FILL' 1;">school</span>
+                        <h2 class="font-headline-md text-headline-md text-on-surface mb-4">Pilihan Program Studi Sarjana
+                            (S1)</h2>
+                        <p class="font-body-md text-body-md text-on-surface-variant mb-6">STISIP Bina Generasi Polewali
+                            menyelenggarakan dua Program Studi S1 pilihan terakreditasi resmi BAN-PT.</p>
                     </div>
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div class="p-4 border border-outline-variant rounded-lg bg-surface-container-lowest">
-                            <h3 class="font-label-md text-label-md text-primary font-bold mb-1">S1 Ilmu Administrasi Negara</h3>
-                            <p class="font-caption text-caption text-on-surface-variant">Terakreditasi B BAN-PT (Gelar: S.A.P.) — Fokus manajemen publik & kebijakan pemerintah.</p>
+                            <h3 class="font-label-md text-label-md text-primary font-bold mb-1">S1 Ilmu Administrasi
+                                Negara</h3>
+                            <p class="font-caption text-caption text-on-surface-variant">Terakreditasi B BAN-PT (Gelar:
+                                S.A.P.) — Fokus manajemen publik & kebijakan pemerintah.</p>
                         </div>
                         <div class="p-4 border border-outline-variant rounded-lg bg-surface-container-lowest">
-                            <h3 class="font-label-md text-label-md text-primary font-bold mb-1">S1 Ilmu Pemerintahan</h3>
-                            <p class="font-caption text-caption text-on-surface-variant">Terakreditasi B BAN-PT (Gelar: S.IP.) — Fokus tata kelola daerah & politik lokal.</p>
+                            <h3 class="font-label-md text-label-md text-primary font-bold mb-1">S1 Ilmu Pemerintahan
+                            </h3>
+                            <p class="font-caption text-caption text-on-surface-variant">Terakreditasi B BAN-PT (Gelar:
+                                S.IP.) — Fokus tata kelola daerah & politik lokal.</p>
                         </div>
                     </div>
                 </div>
-                <div class="bg-primary-container rounded-xl border border-outline-variant p-8 flex flex-col justify-between">
+                <div
+                    class="bg-primary-container rounded-xl border border-outline-variant p-8 flex flex-col justify-between">
                     <div>
-                        <span class="material-symbols-outlined text-secondary-fixed text-4xl mb-4" data-weight="fill" style="font-variation-settings: 'FILL' 1;">calendar_month</span>
+                        <span class="material-symbols-outlined text-secondary-fixed text-4xl mb-4" data-weight="fill"
+                            style="font-variation-settings: 'FILL' 1;">calendar_month</span>
                         <h2 class="font-headline-sm text-headline-sm text-on-primary mb-4">Gelombang Pendaftaran</h2>
                         <ul class="space-y-4">
                             <li class="flex justify-between items-center border-b border-on-primary/20 pb-2">
                                 <span class="font-label-md text-label-md text-on-primary">Gelombang I</span>
-                                <span class="font-caption text-caption text-secondary-fixed font-bold">Sedang Berlangsung</span>
+                                <span class="font-caption text-caption text-secondary-fixed font-bold">Sedang
+                                    Berlangsung</span>
                             </li>
                             <li class="flex justify-between items-center border-b border-on-primary/20 pb-2">
                                 <span class="font-label-md text-label-md text-on-primary">Gelombang II</span>
@@ -132,20 +176,26 @@
 
         <!-- Timeline Section -->
         <section class="mb-section-padding-desktop">
-            <h2 class="font-headline-md text-headline-md text-on-surface mb-12 text-center">Alur Pendaftaran Sederhana</h2>
+            <h2 class="font-headline-md text-headline-md text-on-surface mb-12 text-center">Alur Pendaftaran Sederhana
+            </h2>
             <div class="relative max-w-4xl mx-auto">
                 <!-- Vertical Line -->
-                <div class="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-outline-variant transform md:-translate-x-1/2"></div>
+                <div
+                    class="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-outline-variant transform md:-translate-x-1/2">
+                </div>
                 <div class="space-y-12">
                     <!-- Step 1 -->
                     <div class="relative flex flex-col md:flex-row items-center md:justify-between w-full">
                         <div class="order-1 md:w-5/12 flex justify-start md:justify-end pr-8 pl-12 md:pl-0">
                             <div class="bg-surface border border-outline-variant p-6 rounded-lg w-full shadow-sm">
-                                <h3 class="font-headline-sm text-headline-sm text-primary mb-2">1. Formulir Online / WhatsApp</h3>
-                                <p class="font-body-md text-body-md text-on-surface-variant">Isi data pribadi dan konfirmasi pendaftaran kepada Panitia PMB STISIP Bina Generasi Polewali.</p>
+                                <h3 class="font-headline-sm text-headline-sm text-primary mb-2">1. Formulir Online /
+                                    WhatsApp</h3>
+                                <p class="font-body-md text-body-md text-on-surface-variant">Isi data pribadi dan
+                                    konfirmasi pendaftaran kepada Panitia PMB STISIP Bina Generasi Polewali.</p>
                             </div>
                         </div>
-                        <div class="absolute left-0 md:left-1/2 flex items-center justify-center w-8 h-8 bg-secondary rounded-full border-4 border-background transform md:-translate-x-1/2 mt-6 md:mt-0 z-10">
+                        <div
+                            class="absolute left-0 md:left-1/2 flex items-center justify-center w-8 h-8 bg-secondary rounded-full border-4 border-background transform md:-translate-x-1/2 mt-6 md:mt-0 z-10">
                             <span class="font-label-md text-label-md text-primary font-bold">1</span>
                         </div>
                         <div class="order-3 md:w-5/12"></div>
@@ -153,13 +203,15 @@
                     <!-- Step 2 -->
                     <div class="relative flex flex-col md:flex-row items-center md:justify-between w-full">
                         <div class="order-3 md:order-1 md:w-5/12"></div>
-                        <div class="absolute left-0 md:left-1/2 flex items-center justify-center w-8 h-8 bg-surface-variant rounded-full border-4 border-background transform md:-translate-x-1/2 mt-6 md:mt-0 z-10">
+                        <div
+                            class="absolute left-0 md:left-1/2 flex items-center justify-center w-8 h-8 bg-surface-variant rounded-full border-4 border-background transform md:-translate-x-1/2 mt-6 md:mt-0 z-10">
                             <span class="font-label-md text-label-md text-on-surface-variant font-bold">2</span>
                         </div>
                         <div class="order-1 md:order-3 md:w-5/12 flex justify-start pl-12 md:pl-8">
                             <div class="bg-surface border border-outline-variant p-6 rounded-lg w-full">
                                 <h3 class="font-headline-sm text-headline-sm text-primary mb-2">2. Isi Formulir</h3>
-                                <p class="font-body-md text-body-md text-on-surface-variant">Lengkapi biodata diri, data sekolah asal, dan pilih program studi yang diminati.</p>
+                                <p class="font-body-md text-body-md text-on-surface-variant">Lengkapi biodata diri, data
+                                    sekolah asal, dan pilih program studi yang diminati.</p>
                             </div>
                         </div>
                     </div>
@@ -168,10 +220,12 @@
                         <div class="order-1 md:w-5/12 flex justify-start md:justify-end pr-8 pl-12 md:pl-0">
                             <div class="bg-surface border border-outline-variant p-6 rounded-lg w-full">
                                 <h3 class="font-headline-sm text-headline-sm text-primary mb-2">3. Pembayaran</h3>
-                                <p class="font-body-md text-body-md text-on-surface-variant">Lakukan pembayaran biaya pendaftaran melalui bank atau metode yang tersedia.</p>
+                                <p class="font-body-md text-body-md text-on-surface-variant">Lakukan pembayaran biaya
+                                    pendaftaran melalui bank atau metode yang tersedia.</p>
                             </div>
                         </div>
-                        <div class="absolute left-0 md:left-1/2 flex items-center justify-center w-8 h-8 bg-surface-variant rounded-full border-4 border-background transform md:-translate-x-1/2 mt-6 md:mt-0 z-10">
+                        <div
+                            class="absolute left-0 md:left-1/2 flex items-center justify-center w-8 h-8 bg-surface-variant rounded-full border-4 border-background transform md:-translate-x-1/2 mt-6 md:mt-0 z-10">
                             <span class="font-label-md text-label-md text-on-surface-variant font-bold">3</span>
                         </div>
                         <div class="order-3 md:w-5/12"></div>
@@ -179,13 +233,16 @@
                     <!-- Step 4 -->
                     <div class="relative flex flex-col md:flex-row items-center md:justify-between w-full">
                         <div class="order-3 md:order-1 md:w-5/12"></div>
-                        <div class="absolute left-0 md:left-1/2 flex items-center justify-center w-8 h-8 bg-surface-variant rounded-full border-4 border-background transform md:-translate-x-1/2 mt-6 md:mt-0 z-10">
+                        <div
+                            class="absolute left-0 md:left-1/2 flex items-center justify-center w-8 h-8 bg-surface-variant rounded-full border-4 border-background transform md:-translate-x-1/2 mt-6 md:mt-0 z-10">
                             <span class="font-label-md text-label-md text-on-surface-variant font-bold">4</span>
                         </div>
                         <div class="order-1 md:order-3 md:w-5/12 flex justify-start pl-12 md:pl-8">
                             <div class="bg-surface border border-outline-variant p-6 rounded-lg w-full">
-                                <h3 class="font-headline-sm text-headline-sm text-primary mb-2">4. Seleksi &amp; Pengumuman</h3>
-                                <p class="font-body-md text-body-md text-on-surface-variant">Ikuti tahapan seleksi (jika ada) dan cek pengumuman kelulusan di portal PMB.</p>
+                                <h3 class="font-headline-sm text-headline-sm text-primary mb-2">4. Seleksi &amp;
+                                    Pengumuman</h3>
+                                <p class="font-body-md text-body-md text-on-surface-variant">Ikuti tahapan seleksi (jika
+                                    ada) dan cek pengumuman kelulusan di portal PMB.</p>
                             </div>
                         </div>
                     </div>
@@ -195,12 +252,16 @@
     </main>
 
     <!-- Footer (Shared Component) -->
-    <footer aria-label="Site Footer" class="bg-primary text-on-primary w-full py-section-padding-desktop px-gutter max-w-container-max mx-auto border-t border-outline-variant full-width bottom-0 mt-20" style="background: linear-gradient(180deg, #001026 0%, #000817 100%);">
+    <footer aria-label="Site Footer"
+        class="bg-primary text-on-primary w-full py-section-padding-desktop px-gutter max-w-container-max mx-auto border-t border-outline-variant full-width bottom-0 mt-20"
+        style="background: linear-gradient(180deg, #001026 0%, #000817 100%);">
         <div class="flex flex-col md:flex-row justify-between items-start gap-8">
             <div class="flex flex-col gap-4 max-w-sm">
                 <div class="flex items-center gap-3">
-                    <img alt="Logo STISIP Bina Generasi Polewali" class="h-12 w-auto object-contain" src="img/LOGO STISIP.png"/>
-                    <span class="font-display-lg text-[22px] font-bold text-on-primary leading-tight">STISIP Bina Generasi</span>
+                    <img alt="Logo STISIP Bina Generasi Polewali" class="h-12 w-auto object-contain"
+                        src="img/LOGO STISIP.png" />
+                    <span class="font-display-lg text-[22px] font-bold text-on-primary leading-tight">STISIP Bina
+                        Generasi</span>
                 </div>
                 <p class="font-body-md text-body-md text-on-primary/80">
                     Sekolah Tinggi Ilmu Sosial dan Ilmu Politik (STISIP) Bina Generasi Polewali Mandar, Sulawesi Barat.
@@ -211,28 +272,37 @@
             </div>
             <div class="grid grid-cols-2 md:grid-cols-3 gap-8 w-full md:w-auto">
                 <div class="flex flex-col gap-3">
-                    <h4 class="font-label-md text-label-md text-secondary font-bold uppercase tracking-wider">Halaman</h4>
-                    <a class="font-body-md text-body-md text-on-primary/80 hover:text-white transition-colors" href="profil.html">Profil Kampus</a>
-                    <a class="font-body-md text-body-md text-on-primary/80 hover:text-white transition-colors" href="program-studi.html">Program Studi</a>
-                    <a class="font-body-md text-body-md text-on-primary/80 hover:text-white transition-colors" href="pmb.html">PMB Online</a>
+                    <h4 class="font-label-md text-label-md text-secondary font-bold uppercase tracking-wider">Halaman
+                    </h4>
+                    <a class="font-body-md text-body-md text-on-primary/80 hover:text-white transition-colors"
+                        href="profil.html">Profil Kampus</a>
+                    <a class="font-body-md text-body-md text-on-primary/80 hover:text-white transition-colors"
+                        href="program-studi.html">Program Studi</a>
+                    <a class="font-body-md text-body-md text-on-primary/80 hover:text-white transition-colors"
+                        href="pmb.html">PMB Online</a>
                 </div>
                 <div class="flex flex-col gap-3">
-                    <h4 class="font-label-md text-label-md text-secondary font-bold uppercase tracking-wider">Program Studi</h4>
-                    <a class="font-body-md text-body-md text-on-primary/80 hover:text-white transition-colors" href="program-studi.html">S1 Ilmu Administrasi Negara</a>
-                    <a class="font-body-md text-body-md text-on-primary/80 hover:text-white transition-colors" href="program-studi.html">S1 Ilmu Pemerintahan</a>
+                    <h4 class="font-label-md text-label-md text-secondary font-bold uppercase tracking-wider">Program
+                        Studi</h4>
+                    <a class="font-body-md text-body-md text-on-primary/80 hover:text-white transition-colors"
+                        href="program-studi.html">S1 Ilmu Administrasi Negara</a>
+                    <a class="font-body-md text-body-md text-on-primary/80 hover:text-white transition-colors"
+                        href="program-studi.html">S1 Ilmu Pemerintahan</a>
                 </div>
                 <div class="flex flex-col gap-3 col-span-2 md:col-span-1">
-                    <h4 class="font-label-md text-label-md text-secondary font-bold uppercase tracking-wider">Kontak Kami</h4>
-                    <span class="font-body-md text-body-md text-on-primary/80">Telepon: +62 812-3456-7890</span>
+                    <h4 class="font-label-md text-label-md text-secondary font-bold uppercase tracking-wider">Kontak
+                        Kami</h4>
+                    <span class="font-body-md text-body-md text-on-primary/80">Telepon: +62 853-4168-3204</span>
                     <span class="font-body-md text-body-md text-on-primary/80">Email: info@stisipbgp.ac.id</span>
                 </div>
             </div>
         </div>
-        <div class="w-full mt-12 pt-8 border-t border-on-primary/10 text-center text-on-primary/60 font-caption text-caption">
+        <div
+            class="w-full mt-12 pt-8 border-t border-on-primary/10 text-center text-on-primary/60 font-caption text-caption">
             © 2026 STISIP Bina Generasi Polewali. Seluruh Hak Cipta Dilindungi.
         </div>
     </footer>
     <script src="assets/js/main.js"></script>
 </body>
-</html>
 
+</html>

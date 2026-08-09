@@ -1,31 +1,43 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Portal Layanan - STISIP BIKES</title>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&amp;family=Inter:wght@400;600&amp;display=swap"
+        rel="stylesheet" />
     <style>
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
+
         .material-symbols-outlined[data-weight="fill"] {
             font-variation-settings: 'FILL' 1;
         }
     </style>
-    <link href="assets/css/styles.css" rel="stylesheet"/>
+    <link href="assets/css/styles.css" rel="stylesheet" />
 </head>
+
 <body class="bg-background text-on-surface font-body-md min-h-screen flex flex-col pt-[72px]">
     <!-- TopNavBar (Shared Component) -->
-    <header aria-label="Main Navigation" class="shadow-md docked full-width top-0 fixed w-full z-50 flex flex-col items-center px-gutter max-w-container-max mx-auto h-[78px] justify-center left-0 right-0 header-site">
+    <header aria-label="Main Navigation"
+        class="shadow-md docked full-width top-0 fixed w-full z-50 flex flex-col items-center px-gutter max-w-container-max mx-auto h-[78px] justify-center left-0 right-0 header-site">
         <div class="w-full max-w-container-max flex items-center justify-between">
             <a href="index.html" class="flex items-center gap-3 hover:opacity-90 transition-opacity site-logo">
-                <img alt="Logo STISIP Bina Generasi Polewali" class="h-12 w-auto object-contain" src="img/LOGO STISIP.png"/>
+                <img alt="Logo STISIP Bina Generasi Polewali" class="h-12 w-auto object-contain"
+                    src="img/LOGO STISIP.png" />
                 <div class="flex flex-col">
-                    <span class="brand-title font-display-lg text-[18px] md:text-[20px] font-bold text-on-primary tracking-tight leading-tight">STISIP Bina Generasi</span>
-                    <span class="text-[11px] text-secondary font-semibold tracking-wider uppercase">Polewali Mandar</span>
+                    <span
+                        class="brand-title font-display-lg text-[18px] md:text-[20px] font-bold text-on-primary tracking-tight leading-tight">STISIP
+                        Bina Generasi</span>
+                    <span class="text-[11px] text-secondary font-semibold tracking-wider uppercase">Polewali
+                        Mandar</span>
                 </div>
             </a>
             <nav aria-label="Desktop Navigation" class="hidden md:flex items-center gap-7">
@@ -36,7 +48,8 @@
                 <a class="nav-link-custom active" href="portal-layanan.html">Portal Layanan</a>
             </nav>
             <div class="hidden md:flex items-center gap-4">
-                <a href="pmb.html" class="btn btn-sm btn-primary-custom px-5 py-2.5 rounded font-bold scale-95 active:transition-transform hover:bg-secondary-fixed-dim transition-colors flex items-center justify-center shadow-md">
+                <a href="pmb.html"
+                    class="btn btn-sm btn-primary-custom px-5 py-2.5 rounded font-bold scale-95 active:transition-transform hover:bg-secondary-fixed-dim transition-colors flex items-center justify-center shadow-md">
                     Daftar PMB Online
                 </a>
             </div>
@@ -47,29 +60,39 @@
     </header>
 
     <!-- Mobile Navigation Drawer -->
-    <div id="mobile-menu" class="fixed inset-0 z-50 translate-x-full transition-transform duration-300 ease-in-out md:hidden" aria-hidden="true">
+    <div id="mobile-menu"
+        class="fixed inset-0 z-50 translate-x-full transition-transform duration-300 ease-in-out md:hidden"
+        aria-hidden="true">
         <!-- Overlay -->
         <div id="mobile-menu-overlay" class="absolute inset-0 bg-primary/80 backdrop-blur-sm"></div>
         <!-- Drawer Content -->
-        <div class="absolute right-0 top-0 bottom-0 w-72 bg-primary text-on-primary p-6 flex flex-col gap-6 shadow-xl z-10" style="background: linear-gradient(180deg, #001026 0%, #000a1e 100%);">
+        <div class="absolute right-0 top-0 bottom-0 w-72 bg-primary text-on-primary p-6 flex flex-col gap-6 shadow-xl z-10"
+            style="background: linear-gradient(180deg, #001026 0%, #000a1e 100%);">
             <div class="flex items-center justify-between border-b border-on-primary/10 pb-4">
                 <div class="flex items-center gap-2">
-                    <img alt="Logo STISIP" class="h-8 w-auto" src="img/LOGO STISIP.png"/>
+                    <img alt="Logo STISIP" class="h-8 w-auto" src="img/LOGO STISIP.png" />
                     <span class="font-display-lg text-[16px] font-bold text-on-primary">STISIP Bina Generasi</span>
                 </div>
-                <button id="mobile-menu-close" aria-label="Close Menu" class="text-on-primary p-1 rounded-full hover:bg-primary-container">
+                <button id="mobile-menu-close" aria-label="Close Menu"
+                    class="text-on-primary p-1 rounded-full hover:bg-primary-container">
                     <span class="material-symbols-outlined">close</span>
                 </button>
             </div>
             <nav class="flex flex-col gap-4 mt-2">
-                <a class="font-label-md text-label-md py-2 border-b border-on-primary/10 transition-colors hover:text-secondary" href="index.html">Beranda</a>
-                <a class="font-label-md text-label-md py-2 border-b border-on-primary/10 transition-colors hover:text-secondary" href="profil.html">Profil Kampus</a>
-                <a class="font-label-md text-label-md py-2 border-b border-on-primary/10 transition-colors hover:text-secondary" href="program-studi.html">Program Studi</a>
-                <a class="font-label-md text-label-md py-2 border-b border-on-primary/10 transition-colors hover:text-secondary" href="pmb.html">PMB Online</a>
-                <a class="font-label-md text-label-md py-2 border-b border-on-primary/10 transition-colors text-secondary font-bold" href="portal-layanan.html">Portal Layanan</a>
+                <a class="font-label-md text-label-md py-2 border-b border-on-primary/10 transition-colors hover:text-secondary"
+                    href="index.html">Beranda</a>
+                <a class="font-label-md text-label-md py-2 border-b border-on-primary/10 transition-colors hover:text-secondary"
+                    href="profil.html">Profil Kampus</a>
+                <a class="font-label-md text-label-md py-2 border-b border-on-primary/10 transition-colors hover:text-secondary"
+                    href="program-studi.html">Program Studi</a>
+                <a class="font-label-md text-label-md py-2 border-b border-on-primary/10 transition-colors hover:text-secondary"
+                    href="pmb.html">PMB Online</a>
+                <a class="font-label-md text-label-md py-2 border-b border-on-primary/10 transition-colors text-secondary font-bold"
+                    href="portal-layanan.html">Portal Layanan</a>
             </nav>
             <div class="mt-auto flex flex-col gap-4">
-                <a href="pmb.html" class="w-full font-label-md text-label-md bg-secondary text-primary py-3 rounded font-bold hover:bg-secondary-fixed-dim transition-colors text-center shadow-md">
+                <a href="pmb.html"
+                    class="w-full font-label-md text-label-md bg-secondary text-primary py-3 rounded font-bold hover:bg-secondary-fixed-dim transition-colors text-center shadow-md">
                     Daftar PMB Sekarang
                 </a>
             </div>
@@ -81,92 +104,134 @@
         <!-- Header Section -->
         <header class="text-center mb-12">
             <h1 class="font-headline-md text-headline-md text-primary mb-4">Portal Layanan Terpadu</h1>
-            <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Akses cepat ke berbagai sistem informasi akademik dan layanan kampus STISIP BIKES. Silakan pilih layanan yang Anda butuhkan di bawah ini.</p>
+            <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Akses cepat ke berbagai
+                sistem informasi akademik dan layanan kampus STISIP BIKES. Silakan pilih layanan yang Anda butuhkan di
+                bawah ini.</p>
         </header>
         <!-- Bento Grid Layout for Services -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <!-- SIAKAD Card -->
-            <a class="group relative overflow-hidden rounded-xl border border-outline-variant bg-surface-container-lowest p-6 transition-all duration-300 hover:shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:border-secondary flex flex-col h-full" href="#">
+            <a class="group relative overflow-hidden rounded-xl border border-outline-variant bg-surface-container-lowest p-6 transition-all duration-300 hover:shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:border-secondary flex flex-col h-full"
+                href="#">
                 <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary-fixed text-primary">
                     <span class="material-symbols-outlined text-3xl" data-icon="school" data-weight="fill">school</span>
                 </div>
                 <h3 class="font-headline-sm text-headline-sm text-primary mb-2">SIAKAD</h3>
-                <p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-6">Sistem Informasi Akademik untuk pengelolaan KRS, KHS, jadwal kuliah, dan administrasi akademik mahasiswa.</p>
-                <div class="flex items-center text-secondary font-label-md text-label-md mt-auto group-hover:text-primary transition-colors">
+                <p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-6">Sistem Informasi Akademik
+                    untuk pengelolaan KRS, KHS, jadwal kuliah, dan administrasi akademik mahasiswa.</p>
+                <div
+                    class="flex items-center text-secondary font-label-md text-label-md mt-auto group-hover:text-primary transition-colors">
                     <span>Akses SIAKAD</span>
-                    <span class="material-symbols-outlined ml-1 text-sm transform group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+                    <span
+                        class="material-symbols-outlined ml-1 text-sm transform group-hover:translate-x-1 transition-transform"
+                        data-icon="arrow_forward">arrow_forward</span>
                 </div>
             </a>
             <!-- E-Learning Card -->
-            <a class="group relative overflow-hidden rounded-xl border border-outline-variant bg-surface-container-lowest p-6 transition-all duration-300 hover:shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:border-secondary flex flex-col h-full lg:col-span-2 lg:bg-primary-container lg:text-on-primary-container lg:border-none" href="#">
+            <a class="group relative overflow-hidden rounded-xl border border-outline-variant bg-surface-container-lowest p-6 transition-all duration-300 hover:shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:border-secondary flex flex-col h-full lg:col-span-2 lg:bg-primary-container lg:text-on-primary-container lg:border-none"
+                href="#">
                 <!-- Decorative background pattern for large card -->
-                <div class="absolute inset-0 opacity-10 pointer-events-none hidden lg:block" style="background-image: radial-gradient(circle at 2px 2px, currentColor 1px, transparent 0); background-size: 24px 24px;"></div>
+                <div class="absolute inset-0 opacity-10 pointer-events-none hidden lg:block"
+                    style="background-image: radial-gradient(circle at 2px 2px, currentColor 1px, transparent 0); background-size: 24px 24px;">
+                </div>
                 <div class="relative z-10">
-                    <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary-fixed text-primary lg:bg-secondary lg:text-primary">
-                        <span class="material-symbols-outlined text-3xl" data-icon="cast_for_education" data-weight="fill">cast_for_education</span>
+                    <div
+                        class="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary-fixed text-primary lg:bg-secondary lg:text-primary">
+                        <span class="material-symbols-outlined text-3xl" data-icon="cast_for_education"
+                            data-weight="fill">cast_for_education</span>
                     </div>
-                    <h3 class="font-headline-sm text-headline-sm text-primary lg:text-on-primary mb-2">E-Learning (LMS)</h3>
-                    <p class="font-body-md text-body-md text-on-surface-variant lg:text-on-primary-container flex-grow mb-6 max-w-lg">Platform pembelajaran daring (Learning Management System) untuk mengakses materi kuliah, tugas, kuis, dan forum diskusi antar mahasiswa dan dosen.</p>
-                    <div class="flex items-center text-secondary lg:text-secondary-fixed font-label-md text-label-md mt-auto group-hover:text-primary lg:group-hover:text-white transition-colors">
+                    <h3 class="font-headline-sm text-headline-sm text-primary lg:text-on-primary mb-2">E-Learning (LMS)
+                    </h3>
+                    <p
+                        class="font-body-md text-body-md text-on-surface-variant lg:text-on-primary-container flex-grow mb-6 max-w-lg">
+                        Platform pembelajaran daring (Learning Management System) untuk mengakses materi kuliah, tugas,
+                        kuis, dan forum diskusi antar mahasiswa dan dosen.</p>
+                    <div
+                        class="flex items-center text-secondary lg:text-secondary-fixed font-label-md text-label-md mt-auto group-hover:text-primary lg:group-hover:text-white transition-colors">
                         <span>Masuk ke E-Learning</span>
-                        <span class="material-symbols-outlined ml-1 text-sm transform group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+                        <span
+                            class="material-symbols-outlined ml-1 text-sm transform group-hover:translate-x-1 transition-transform"
+                            data-icon="arrow_forward">arrow_forward</span>
                     </div>
                 </div>
             </a>
             <!-- Digital Library Card -->
-            <a class="group relative overflow-hidden rounded-xl border border-outline-variant bg-surface-container-lowest p-6 transition-all duration-300 hover:shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:border-secondary flex flex-col h-full" href="#">
+            <a class="group relative overflow-hidden rounded-xl border border-outline-variant bg-surface-container-lowest p-6 transition-all duration-300 hover:shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:border-secondary flex flex-col h-full"
+                href="#">
                 <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary-fixed text-primary">
-                    <span class="material-symbols-outlined text-3xl" data-icon="menu_book" data-weight="fill">menu_book</span>
+                    <span class="material-symbols-outlined text-3xl" data-icon="menu_book"
+                        data-weight="fill">menu_book</span>
                 </div>
                 <h3 class="font-headline-sm text-headline-sm text-primary mb-2">Perpustakaan Digital</h3>
-                <p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-6">Akses koleksi e-book, jurnal ilmiah, repositori karya ilmiah, dan katalog perpustakaan kampus.</p>
-                <div class="flex items-center text-secondary font-label-md text-label-md mt-auto group-hover:text-primary transition-colors">
+                <p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-6">Akses koleksi e-book, jurnal
+                    ilmiah, repositori karya ilmiah, dan katalog perpustakaan kampus.</p>
+                <div
+                    class="flex items-center text-secondary font-label-md text-label-md mt-auto group-hover:text-primary transition-colors">
                     <span>Kunjungi E-Library</span>
-                    <span class="material-symbols-outlined ml-1 text-sm transform group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+                    <span
+                        class="material-symbols-outlined ml-1 text-sm transform group-hover:translate-x-1 transition-transform"
+                        data-icon="arrow_forward">arrow_forward</span>
                 </div>
             </a>
             <!-- Alumni Portal Card -->
-            <a class="group relative overflow-hidden rounded-xl border border-outline-variant bg-surface-container-lowest p-6 transition-all duration-300 hover:shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:border-secondary flex flex-col h-full" href="#">
+            <a class="group relative overflow-hidden rounded-xl border border-outline-variant bg-surface-container-lowest p-6 transition-all duration-300 hover:shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:border-secondary flex flex-col h-full"
+                href="#">
                 <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary-fixed text-primary">
                     <span class="material-symbols-outlined text-3xl" data-icon="group" data-weight="fill">group</span>
                 </div>
                 <h3 class="font-headline-sm text-headline-sm text-primary mb-2">Portal Alumni</h3>
-                <p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-6">Jejaring alumni, informasi lowongan kerja, legalisir ijazah online, dan pembaruan data lulusan.</p>
-                <div class="flex items-center text-secondary font-label-md text-label-md mt-auto group-hover:text-primary transition-colors">
+                <p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-6">Jejaring alumni, informasi
+                    lowongan kerja, legalisir ijazah online, dan pembaruan data lulusan.</p>
+                <div
+                    class="flex items-center text-secondary font-label-md text-label-md mt-auto group-hover:text-primary transition-colors">
                     <span>Masuk Portal</span>
-                    <span class="material-symbols-outlined ml-1 text-sm transform group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+                    <span
+                        class="material-symbols-outlined ml-1 text-sm transform group-hover:translate-x-1 transition-transform"
+                        data-icon="arrow_forward">arrow_forward</span>
                 </div>
             </a>
             <!-- Other Services List (Spanning full width on mobile, half on large) -->
-            <div class="col-span-1 md:col-span-2 lg:col-span-3 bg-surface-container-low rounded-xl border border-outline-variant p-6">
-                <h3 class="font-headline-sm text-headline-sm text-primary mb-4 border-b border-outline-variant pb-2">Layanan Tambahan</h3>
+            <div
+                class="col-span-1 md:col-span-2 lg:col-span-3 bg-surface-container-low rounded-xl border border-outline-variant p-6">
+                <h3 class="font-headline-sm text-headline-sm text-primary mb-4 border-b border-outline-variant pb-2">
+                    Layanan Tambahan</h3>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <a class="flex items-center gap-3 p-3 rounded-lg hover:bg-surface-container transition-colors" href="#">
-                        <span class="material-symbols-outlined text-primary" data-icon="support_agent">support_agent</span>
+                    <a class="flex items-center gap-3 p-3 rounded-lg hover:bg-surface-container transition-colors"
+                        href="#">
+                        <span class="material-symbols-outlined text-primary"
+                            data-icon="support_agent">support_agent</span>
                         <div>
                             <h4 class="font-label-md text-label-md text-primary">Helpdesk IT</h4>
-                            <p class="font-caption text-caption text-on-surface-variant">Bantuan teknis sistem kampus</p>
+                            <p class="font-caption text-caption text-on-surface-variant">Bantuan teknis sistem kampus
+                            </p>
                         </div>
                     </a>
-                    <a class="flex items-center gap-3 p-3 rounded-lg hover:bg-surface-container transition-colors" href="#">
+                    <a class="flex items-center gap-3 p-3 rounded-lg hover:bg-surface-container transition-colors"
+                        href="#">
                         <span class="material-symbols-outlined text-primary" data-icon="article">article</span>
                         <div>
                             <h4 class="font-label-md text-label-md text-primary">Jurnal OJS</h4>
-                            <p class="font-caption text-caption text-on-surface-variant">Sistem publikasi jurnal ilmiah</p>
+                            <p class="font-caption text-caption text-on-surface-variant">Sistem publikasi jurnal ilmiah
+                            </p>
                         </div>
                     </a>
-                    <a class="flex items-center gap-3 p-3 rounded-lg hover:bg-surface-container transition-colors" href="#">
-                        <span class="material-symbols-outlined text-primary" data-icon="account_balance_wallet">account_balance_wallet</span>
+                    <a class="flex items-center gap-3 p-3 rounded-lg hover:bg-surface-container transition-colors"
+                        href="#">
+                        <span class="material-symbols-outlined text-primary"
+                            data-icon="account_balance_wallet">account_balance_wallet</span>
                         <div>
                             <h4 class="font-label-md text-label-md text-primary">Sistem Pembayaran</h4>
-                            <p class="font-caption text-caption text-on-surface-variant">Informasi tagihan &amp; riwayat bayar</p>
+                            <p class="font-caption text-caption text-on-surface-variant">Informasi tagihan &amp; riwayat
+                                bayar</p>
                         </div>
                     </a>
-                    <a class="flex items-center gap-3 p-3 rounded-lg hover:bg-surface-container transition-colors" href="#">
+                    <a class="flex items-center gap-3 p-3 rounded-lg hover:bg-surface-container transition-colors"
+                        href="#">
                         <span class="material-symbols-outlined text-primary" data-icon="mail">mail</span>
                         <div>
                             <h4 class="font-label-md text-label-md text-primary">Webmail Kampus</h4>
-                            <p class="font-caption text-caption text-on-surface-variant">Akses email institusi (@stisipbikes.ac.id)</p>
+                            <p class="font-caption text-caption text-on-surface-variant">Akses email institusi
+                                (@stisipbikes.ac.id)</p>
                         </div>
                     </a>
                 </div>
@@ -175,12 +240,16 @@
     </main>
 
     <!-- Footer (Shared Component) -->
-    <footer aria-label="Site Footer" class="bg-primary text-on-primary w-full py-section-padding-desktop px-gutter max-w-container-max mx-auto border-t border-outline-variant full-width bottom-0 mt-20" style="background: linear-gradient(180deg, #001026 0%, #000817 100%);">
+    <footer aria-label="Site Footer"
+        class="bg-primary text-on-primary w-full py-section-padding-desktop px-gutter max-w-container-max mx-auto border-t border-outline-variant full-width bottom-0 mt-20"
+        style="background: linear-gradient(180deg, #001026 0%, #000817 100%);">
         <div class="flex flex-col md:flex-row justify-between items-start gap-8">
             <div class="flex flex-col gap-4 max-w-sm">
                 <div class="flex items-center gap-3">
-                    <img alt="Logo STISIP Bina Generasi Polewali" class="h-12 w-auto object-contain" src="img/LOGO STISIP.png"/>
-                    <span class="font-display-lg text-[22px] font-bold text-on-primary leading-tight">STISIP Bina Generasi</span>
+                    <img alt="Logo STISIP Bina Generasi Polewali" class="h-12 w-auto object-contain"
+                        src="img/LOGO STISIP.png" />
+                    <span class="font-display-lg text-[22px] font-bold text-on-primary leading-tight">STISIP Bina
+                        Generasi</span>
                 </div>
                 <p class="font-body-md text-body-md text-on-primary/80">
                     Sekolah Tinggi Ilmu Sosial dan Ilmu Politik (STISIP) Bina Generasi Polewali Mandar, Sulawesi Barat.
@@ -191,28 +260,37 @@
             </div>
             <div class="grid grid-cols-2 md:grid-cols-3 gap-8 w-full md:w-auto">
                 <div class="flex flex-col gap-3">
-                    <h4 class="font-label-md text-label-md text-secondary font-bold uppercase tracking-wider">Halaman</h4>
-                    <a class="font-body-md text-body-md text-on-primary/80 hover:text-white transition-colors" href="profil.html">Profil Kampus</a>
-                    <a class="font-body-md text-body-md text-on-primary/80 hover:text-white transition-colors" href="program-studi.html">Program Studi</a>
-                    <a class="font-body-md text-body-md text-on-primary/80 hover:text-white transition-colors" href="pmb.html">PMB Online</a>
+                    <h4 class="font-label-md text-label-md text-secondary font-bold uppercase tracking-wider">Halaman
+                    </h4>
+                    <a class="font-body-md text-body-md text-on-primary/80 hover:text-white transition-colors"
+                        href="profil.html">Profil Kampus</a>
+                    <a class="font-body-md text-body-md text-on-primary/80 hover:text-white transition-colors"
+                        href="program-studi.html">Program Studi</a>
+                    <a class="font-body-md text-body-md text-on-primary/80 hover:text-white transition-colors"
+                        href="pmb.html">PMB Online</a>
                 </div>
                 <div class="flex flex-col gap-3">
-                    <h4 class="font-label-md text-label-md text-secondary font-bold uppercase tracking-wider">Program Studi</h4>
-                    <a class="font-body-md text-body-md text-on-primary/80 hover:text-white transition-colors" href="program-studi.html">S1 Ilmu Administrasi Negara</a>
-                    <a class="font-body-md text-body-md text-on-primary/80 hover:text-white transition-colors" href="program-studi.html">S1 Ilmu Pemerintahan</a>
+                    <h4 class="font-label-md text-label-md text-secondary font-bold uppercase tracking-wider">Program
+                        Studi</h4>
+                    <a class="font-body-md text-body-md text-on-primary/80 hover:text-white transition-colors"
+                        href="program-studi.html">S1 Ilmu Administrasi Negara</a>
+                    <a class="font-body-md text-body-md text-on-primary/80 hover:text-white transition-colors"
+                        href="program-studi.html">S1 Ilmu Pemerintahan</a>
                 </div>
                 <div class="flex flex-col gap-3 col-span-2 md:col-span-1">
-                    <h4 class="font-label-md text-label-md text-secondary font-bold uppercase tracking-wider">Kontak Kami</h4>
-                    <span class="font-body-md text-body-md text-on-primary/80">Telepon: +62 812-3456-7890</span>
+                    <h4 class="font-label-md text-label-md text-secondary font-bold uppercase tracking-wider">Kontak
+                        Kami</h4>
+                    <span class="font-body-md text-body-md text-on-primary/80">Telepon: +62 853-4168-3204</span>
                     <span class="font-body-md text-body-md text-on-primary/80">Email: info@stisipbgp.ac.id</span>
                 </div>
             </div>
         </div>
-        <div class="w-full mt-12 pt-8 border-t border-on-primary/10 text-center text-on-primary/60 font-caption text-caption">
+        <div
+            class="w-full mt-12 pt-8 border-t border-on-primary/10 text-center text-on-primary/60 font-caption text-caption">
             © 2026 STISIP Bina Generasi Polewali. Seluruh Hak Cipta Dilindungi.
         </div>
     </footer>
     <script src="assets/js/main.js"></script>
 </body>
-</html>
 
+</html>
