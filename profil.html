@@ -1,133 +1,42 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>Profil - STISIP BIKES</title>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Merriweather:wght@400;700&amp;display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-    <script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                    "surface-container": "#edeeef",
-                    "on-tertiary-fixed-variant": "#8f0f07",
-                    "secondary-container": "#fed488",
-                    "surface-tint": "#465f88",
-                    "surface-container-low": "#f3f4f5",
-                    "inverse-on-surface": "#f0f1f2",
-                    "error": "#ba1a1a",
-                    "on-tertiary-fixed": "#410000",
-                    "surface-variant": "#e1e3e4",
-                    "on-primary-fixed": "#001b3d",
-                    "on-secondary": "#ffffff",
-                    "tertiary-container": "#4c0000",
-                    "tertiary": "#200000",
-                    "error-container": "#ffdad6",
-                    "primary-container": "#002147",
-                    "on-primary": "#ffffff",
-                    "surface-container-high": "#e7e8e9",
-                    "tertiary-fixed": "#ffdad4",
-                    "tertiary-fixed-dim": "#ffb4a8",
-                    "outline": "#74777f",
-                    "surface-container-highest": "#e1e3e4",
-                    "on-tertiary-container": "#ed5542",
-                    "on-primary-fixed-variant": "#2d476f",
-                    "surface-bright": "#f8f9fa",
-                    "surface-container-lowest": "#ffffff",
-                    "on-error": "#ffffff",
-                    "surface-dim": "#d9dadb",
-                    "secondary": "#775a19",
-                    "on-background": "#191c1d",
-                    "on-secondary-container": "#785a1a",
-                    "on-primary-container": "#708ab5",
-                    "surface": "#f8f9fa",
-                    "on-secondary-fixed": "#261900",
-                    "inverse-surface": "#2e3132",
-                    "on-surface-variant": "#44474e",
-                    "secondary-fixed": "#ffdea5",
-                    "primary-fixed-dim": "#aec7f6",
-                    "secondary-fixed-dim": "#e9c176",
-                    "background": "#f8f9fa",
-                    "on-tertiary": "#ffffff",
-                    "primary-fixed": "#d6e3ff",
-                    "on-surface": "#191c1d",
-                    "on-secondary-fixed-variant": "#5d4201",
-                    "inverse-primary": "#aec7f6",
-                    "outline-variant": "#c4c6cf",
-                    "on-error-container": "#93000a",
-                    "primary": "#000a1e"
-            },
-            "borderRadius": {
-                    "DEFAULT": "0.125rem",
-                    "lg": "0.25rem",
-                    "xl": "0.5rem",
-                    "full": "0.75rem"
-            },
-            "spacing": {
-                    "gutter": "24px",
-                    "container-max": "1280px",
-                    "section-padding-desktop": "80px",
-                    "base": "8px",
-                    "section-padding-mobile": "40px"
-            },
-            "fontFamily": {
-                    "display-lg": ["Merriweather"],
-                    "display-lg-mobile": ["Merriweather"],
-                    "label-md": ["Inter"],
-                    "body-md": ["Inter"],
-                    "caption": ["Inter"],
-                    "body-lg": ["Inter"],
-                    "headline-sm": ["Merriweather"],
-                    "headline-md": ["Merriweather"]
-            },
-            "fontSize": {
-                    "display-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
-                    "display-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
-                    "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
-                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                    "caption": ["12px", {"lineHeight": "1.4", "fontWeight": "400"}],
-                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                    "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "700"}],
-                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "700"}]
-            }
-          },
-        },
-      }
-    </script>
     <style>
         .material-symbols-outlined {
           font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
     </style>
+    <link href="assets/css/styles.css" rel="stylesheet"/>
 </head>
-<body class="bg-background text-on-background font-body-md text-body-md antialiased pt-[72px]">
-    <!-- TopNavBar -->
-    <header class="shadow-md docked full-width top-0 fixed w-full z-50 flex flex-col items-center px-gutter max-w-container-max mx-auto left-0 right-0 h-[78px] justify-center" style="background: linear-gradient(135deg, rgba(0, 21, 50, 0.94), rgba(0, 10, 30, 0.97)), url('img/header.jpeg'); background-size: cover; background-position: center; border-bottom: 2px solid #785a1a;">
+<body class="bg-background text-on-background font-body-md text-body-md antialiased">
+    <!-- TopNavBar (Shared Component) -->
+    <header aria-label="Main Navigation" class="shadow-md docked full-width top-0 fixed w-full z-50 flex flex-col items-center px-gutter max-w-container-max mx-auto h-[78px] justify-center left-0 right-0 header-site">
         <div class="w-full max-w-container-max flex items-center justify-between">
-            <!-- Brand -->
-            <a href="index.html" class="flex items-center gap-3 hover:opacity-90 transition-opacity">
+            <a href="index.html" class="flex items-center gap-3 hover:opacity-90 transition-opacity site-logo">
                 <img alt="Logo STISIP Bina Generasi Polewali" class="h-12 w-auto object-contain" src="img/LOGO STISIP.png"/>
                 <div class="flex flex-col">
-                    <span class="font-display-lg text-[18px] md:text-[20px] font-bold text-on-primary tracking-tight leading-tight">STISIP Bina Generasi</span>
+                    <span class="brand-title font-display-lg text-[18px] md:text-[20px] font-bold text-on-primary tracking-tight leading-tight">STISIP Bina Generasi</span>
                     <span class="text-[11px] text-secondary font-semibold tracking-wider uppercase">Polewali Mandar</span>
                 </div>
             </a>
-            <!-- Navigation Links (Desktop) -->
-            <nav class="hidden md:flex gap-7">
-                <a class="text-secondary border-b-2 border-secondary pb-1 font-label-md text-label-md transition-colors duration-200" href="profil.html">Profil Kampus</a>
-                <a class="text-on-primary hover:text-secondary font-label-md text-label-md transition-colors duration-200" href="program-studi.html">Program Studi</a>
-                <a class="text-on-primary hover:text-secondary font-label-md text-label-md transition-colors duration-200" href="pmb.html">PMB 2026/2027</a>
-                <a class="text-on-primary hover:text-secondary font-label-md text-label-md transition-colors duration-200" href="portal-layanan.html">Portal Layanan</a>
+            <nav aria-label="Desktop Navigation" class="hidden md:flex items-center gap-7">
+                <a class="nav-link-custom" href="index.html">Beranda</a>
+                <a class="nav-link-custom active" href="profil.html">Profil Kampus</a>
+                <a class="nav-link-custom" href="program-studi.html">Program Studi</a>
+                <a class="nav-link-custom" href="pmb.html">PMB 2026/2027</a>
+                <a class="nav-link-custom" href="portal-layanan.html">Portal Layanan</a>
             </nav>
-            <!-- Actions -->
             <div class="hidden md:flex items-center gap-4">
-                <a href="pmb.html" class="font-label-md text-label-md bg-secondary text-primary px-5 py-2.5 rounded font-bold hover:bg-secondary-fixed-dim transition-colors flex items-center justify-center shadow-md">Daftar PMB Online</a>
+                <a href="pmb.html" class="btn btn-sm btn-primary-custom px-5 py-2.5 rounded font-bold scale-95 active:transition-transform hover:bg-secondary-fixed-dim transition-colors flex items-center justify-center shadow-md">
+                    Daftar PMB Online
+                </a>
             </div>
-            <!-- Mobile Menu Toggle -->
             <button id="mobile-menu-toggle" aria-label="Menu" class="md:hidden text-on-primary p-2 focus:outline-none">
                 <span class="material-symbols-outlined">menu</span>
             </button>
@@ -150,6 +59,7 @@
                 </button>
             </div>
             <nav class="flex flex-col gap-4 mt-2">
+                <a class="font-label-md text-label-md py-2 border-b border-on-primary/10 transition-colors hover:text-secondary" href="index.html">Beranda</a>
                 <a class="font-label-md text-label-md py-2 border-b border-on-primary/10 transition-colors text-secondary font-bold" href="profil.html">Profil Kampus</a>
                 <a class="font-label-md text-label-md py-2 border-b border-on-primary/10 transition-colors hover:text-secondary" href="program-studi.html">Program Studi</a>
                 <a class="font-label-md text-label-md py-2 border-b border-on-primary/10 transition-colors hover:text-secondary" href="pmb.html">PMB Online</a>
@@ -198,7 +108,8 @@
         </section>
     </main>
     <!-- Footer -->
-    <footer class="bg-primary text-on-primary w-full py-section-padding-desktop px-gutter max-w-container-max mx-auto border-t border-outline-variant full-width bottom-0 mt-20" style="background: linear-gradient(180deg, #001026 0%, #000817 100%);">
+    <!-- Footer (Shared Component) -->
+    <footer aria-label="Site Footer" class="bg-primary text-on-primary w-full py-section-padding-desktop px-gutter max-w-container-max mx-auto border-t border-outline-variant full-width bottom-0 mt-20" style="background: linear-gradient(180deg, #001026 0%, #000817 100%);">
         <div class="flex flex-col md:flex-row justify-between items-start gap-8">
             <div class="flex flex-col gap-4 max-w-sm">
                 <div class="flex items-center gap-3">
@@ -208,13 +119,27 @@
                 <p class="font-body-md text-body-md text-on-primary/80">
                     Sekolah Tinggi Ilmu Sosial dan Ilmu Politik (STISIP) Bina Generasi Polewali Mandar, Sulawesi Barat.
                 </p>
+                <p class="font-body-md text-[14px] text-secondary">
+                    Jl. Mr. Muh. Yamin No. 195, Manding, Polewali Mandar, Sulawesi Barat
+                </p>
             </div>
-            <div class="flex flex-col md:flex-row gap-8 md:gap-16">
-                <nav class="flex flex-col gap-3">
-                    <a class="font-label-md text-label-md text-on-primary/80 hover:text-white transition-colors" href="index.html">Beranda</a>
-                    <a class="font-label-md text-label-md text-on-primary/80 hover:text-white transition-colors" href="program-studi.html">Program Studi</a>
-                    <a class="font-label-md text-label-md text-on-primary/80 hover:text-white transition-colors" href="pmb.html">PMB Online</a>
-                </nav>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-8 w-full md:w-auto">
+                <div class="flex flex-col gap-3">
+                    <h4 class="font-label-md text-label-md text-secondary font-bold uppercase tracking-wider">Halaman</h4>
+                    <a class="font-body-md text-body-md text-on-primary/80 hover:text-white transition-colors" href="profil.html">Profil Kampus</a>
+                    <a class="font-body-md text-body-md text-on-primary/80 hover:text-white transition-colors" href="program-studi.html">Program Studi</a>
+                    <a class="font-body-md text-body-md text-on-primary/80 hover:text-white transition-colors" href="pmb.html">PMB Online</a>
+                </div>
+                <div class="flex flex-col gap-3">
+                    <h4 class="font-label-md text-label-md text-secondary font-bold uppercase tracking-wider">Program Studi</h4>
+                    <a class="font-body-md text-body-md text-on-primary/80 hover:text-white transition-colors" href="program-studi.html">S1 Ilmu Administrasi Negara</a>
+                    <a class="font-body-md text-body-md text-on-primary/80 hover:text-white transition-colors" href="program-studi.html">S1 Ilmu Pemerintahan</a>
+                </div>
+                <div class="flex flex-col gap-3 col-span-2 md:col-span-1">
+                    <h4 class="font-label-md text-label-md text-secondary font-bold uppercase tracking-wider">Kontak Kami</h4>
+                    <span class="font-body-md text-body-md text-on-primary/80">Telepon: +62 812-3456-7890</span>
+                    <span class="font-body-md text-body-md text-on-primary/80">Email: info@stisipbgp.ac.id</span>
+                </div>
             </div>
         </div>
         <div class="w-full mt-12 pt-8 border-t border-on-primary/10 text-center text-on-primary/60 font-caption text-caption">
@@ -224,3 +149,4 @@
     <script src="assets/js/main.js"></script>
 </body>
 </html>
+

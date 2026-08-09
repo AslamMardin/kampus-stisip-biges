@@ -1,20 +1,18 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Select elements for mobile menu
     const toggleBtn = document.getElementById('mobile-menu-toggle');
     const closeBtn = document.getElementById('mobile-menu-close');
     const mobileMenu = document.getElementById('mobile-menu');
     const overlay = document.getElementById('mobile-menu-overlay');
 
-    // Open mobile menu
     if (toggleBtn && mobileMenu) {
         toggleBtn.addEventListener('click', () => {
             mobileMenu.classList.remove('translate-x-full');
+            mobileMenu.classList.add('open');
             mobileMenu.setAttribute('aria-hidden', 'false');
-            document.body.classList.add('overflow-hidden'); // Prevent background scrolling
+            document.body.classList.add('overflow-hidden');
         });
     }
 
-    // Close mobile menu helper
     const closeMobileMenu = () => {
         if (mobileMenu) {
             mobileMenu.classList.add('translate-x-full');
@@ -23,25 +21,36 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // Close on close button click
     if (closeBtn) {
         closeBtn.addEventListener('click', closeMobileMenu);
     }
 
-    // Close on overlay click
     if (overlay) {
         overlay.addEventListener('click', closeMobileMenu);
     }
 
-    // Close on link click (in case of anchor links)
     const mobileLinks = mobileMenu ? mobileMenu.querySelectorAll('a') : [];
     mobileLinks.forEach(link => {
         link.addEventListener('click', closeMobileMenu);
     });
 
-    // Typewriter (Animasi Tulisan Ngetik) Engine
-    const typingTextEl = document.querySelector('.typing-text');
+    const heroBackgrounds = Array.from(document.querySelectorAll('.hero-bg'));
+    let heroIndex = 0;
+
+    if (heroBackgrounds.length > 1) {
+        setInterval(() => {
+            const current = heroBackgrounds[heroIndex];
+            if (current) { current.classList.remove('is-active'); }
+
+            heroIndex = (heroIndex + 1) % heroBackgrounds.length;
+            const next = heroBackgrounds[heroIndex];
+            if (next) { next.classList.add('is-active'); }
+        }, 4500);
+    }
+
+    const typingTextEl = document.querySelector('.hero-typing');
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
     if (typingTextEl && !prefersReducedMotion) {
         const rawPhrases = typingTextEl.getAttribute('data-phrases');
         let phrases = [];
@@ -59,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             function type() {
                 const currentPhrase = phrases[phraseIndex];
-                
+
                 if (isDeleting) {
                     charIndex--;
                     typeSpeed = 40;
@@ -71,12 +80,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 typingTextEl.textContent = currentPhrase.substring(0, charIndex);
 
                 if (!isDeleting && charIndex === currentPhrase.length) {
-                    typeSpeed = 2600; // Pause at end of phrase
+                    typeSpeed = 2600;
                     isDeleting = true;
                 } else if (isDeleting && charIndex === 0) {
                     isDeleting = false;
                     phraseIndex = (phraseIndex + 1) % phrases.length;
-                    typeSpeed = 400; // Brief pause before typing next phrase
+                    typeSpeed = 400;
                 }
 
                 setTimeout(type, typeSpeed);
@@ -85,4 +94,14 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(type, 600);
         }
     }
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('in-view');
+            }
+        });
+    }, { threshold: 0.16 });
+
+    document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
 });
