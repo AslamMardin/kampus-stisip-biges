@@ -5,12 +5,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Profil - STISIP BIKES</title>
+    <title>Visi Misi - STISIP BIKES</title>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Merriweather:wght@400;700&amp;display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Merriweather:wght@400;700&display=swap"
         rel="stylesheet" />
     <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
         rel="stylesheet" />
     <style>
         .material-symbols-outlined {
@@ -41,12 +41,11 @@
                 <div class="dropdown-container">
                     <a class="nav-link-custom active cursor-pointer flex items-center gap-1" href="#">Profil Kampus <span class="material-symbols-outlined text-[16px]">arrow_drop_down</span></a>
                     <div class="dropdown-menu-custom">
-                        <a href="profil.html" class="active">Sejarah Singkat</a>
-                        <a href="visimisi.html">Visi & Misi</a>
+                        <a href="profil.html">Sejarah Singkat</a>
+                        <a href="visimisi.html" class="active">Visi & Misi</a>
                     </div>
                 </div>
                 <a class="nav-link-custom" href="program-studi.html">Program Studi</a>
-
                 <a class="nav-link-custom" href="portal-layanan.html">Portal Layanan</a>
             </nav>
             <div class="hidden md:flex items-center gap-4">
@@ -89,15 +88,14 @@
                         <span class="material-symbols-outlined text-[20px] transition-transform group-open:rotate-180">arrow_drop_down</span>
                     </summary>
                     <div class="flex flex-col gap-2 pt-1 pb-1">
-                        <a class="font-label-md text-label-md pl-4 transition-colors text-secondary font-bold"
-                            href="profil.html">Sejarah Singkat</a>
                         <a class="font-label-md text-label-md pl-4 transition-colors hover:text-secondary text-on-primary/80"
+                            href="profil.html">Sejarah Singkat</a>
+                        <a class="font-label-md text-label-md pl-4 transition-colors text-secondary font-bold"
                             href="visimisi.html">Visi & Misi</a>
                     </div>
                 </details>
                 <a class="font-label-md text-label-md py-2 border-b border-on-primary/10 transition-colors hover:text-secondary"
                     href="program-studi.html">Program Studi</a>
-
                 <a class="font-label-md text-label-md py-2 border-b border-on-primary/10 transition-colors hover:text-secondary"
                     href="portal-layanan.html">Portal Layanan</a>
             </nav>
@@ -113,54 +111,106 @@
     <!-- Main Content -->
     <main>
         <!-- Hero Section -->
-        <section class="relative w-full h-[60vh] min-h-[400px] flex items-center justify-center bg-primary">
+        <section class="relative w-full h-[50vh] min-h-[300px] flex items-center justify-center bg-primary">
             <div class="absolute inset-0 z-0">
                 <div class="bg-cover bg-center w-full h-full opacity-60"
-                    style="background-image: url('img/header.jpeg')"></div>
+                    style="background-image: url('img/foto kampus 3.jpeg')"></div>
                 <div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/60 to-primary/40"></div>
             </div>
             <div class="relative z-10 text-center px-gutter max-w-[800px]">
-                <h1 class="font-display-lg text-display-lg md:font-display-lg text-on-primary mb-6">Profil Institusi
+                <h1 class="font-display-lg text-display-lg md:font-display-lg text-on-primary mb-4">Visi & Misi
                 </h1>
-                <p class="font-body-lg text-body-lg text-on-primary-container">Menyemai bibit unggul, membangun
-                    peradaban melalui pendidikan berkualitas dan integritas akademik yang kokoh di Polewali Mandar.</p>
+                <p class="font-body-lg text-body-lg text-on-primary-container">Panduan strategis dalam mewujudkan pendidikan berkualitas di STISIP Bina Generasi Polewali.</p>
             </div>
         </section>
-        <!-- Sejarah Singkat -->
-        <section id="sejarah"
-            class="py-section-padding-mobile md:py-section-padding-desktop px-gutter max-w-container-max mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
-                <div class="md:col-span-5 relative">
-                    <img alt="Sejarah STISIP Bina Generasi Polewali"
-                        class="w-full aspect-[4/3] md:aspect-[4/5] object-cover rounded-xl shadow-lg border border-outline-variant/40"
-                        src="img/foto kampus 2.jpeg" />
-                    <div
-                        class="absolute -bottom-4 -right-4 w-2/3 aspect-square bg-surface-container rounded-xl -z-10 hidden md:block border border-outline-variant/30">
+
+        <!-- Visi Misi Section -->
+        <section class="py-section-padding-mobile md:py-section-padding-desktop px-gutter max-w-container-max mx-auto">
+            <div class="flex flex-col gap-12">
+                
+                <!-- Perguruan Tinggi -->
+                <div class="bg-surface rounded-2xl shadow-sm border border-outline-variant p-8 md:p-12 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-secondary/5 rounded-bl-[100px] -z-10"></div>
+                    <div class="flex items-center gap-4 mb-8 border-b border-outline-variant pb-4">
+                        <span class="material-symbols-outlined text-[40px] text-primary">account_balance</span>
+                        <h2 class="font-headline-md text-[24px] md:text-[32px] text-primary">STISIP Bina Generasi Polewali</h2>
+                    </div>
+
+                    <div class="mb-8">
+                        <h3 class="font-label-md text-[16px] text-secondary font-bold uppercase tracking-wider mb-4">Visi Perguruan Tinggi</h3>
+                        <p class="font-display-lg text-[20px] md:text-[24px] leading-relaxed text-on-surface-variant italic border-l-4 border-secondary pl-6">
+                            "Menjadi sekolah tinggi yang unggul dan terpercaya di bidang ilmu sosial dan ilmu politik yang mengedepankan nilai-nilai kearifan lokal yang malaqbiq, berkualitas dan berkarakter bangsa tahun 2037."
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3 class="font-label-md text-[16px] text-secondary font-bold uppercase tracking-wider mb-4">Misi Perguruan Tinggi</h3>
+                        <ol class="list-decimal pl-5 space-y-3 font-body-md text-on-surface-variant">
+                            <li>Menyelenggarakan kegiatan Pendidikan dan Pengajaran yang Intelektual dan berkualitas pada bidang Ilmu Sosial dan Ilmu Politik STISIP Bina Generasi Polewali untuk menghasilkan sumber daya manusia yang terampil dan profesional serta berakhlak mulia.</li>
+                            <li>Menyelenggarakan proses penelitian dan pengabdian masyarakat yang berkualitas sesuai dengan standar ilmu di bidang Ilmu Sosial dan Ilmu Politik sebagai penerapan ilmu yang relevan dengan kebutuhan masyarakat.</li>
+                            <li>Menyelenggarakan kegiatan pendidikan dengan akuntabilitas, kemandirian dan tata kelola yang efektif dan efisien.</li>
+                            <li>Menjalin hubungan kerja sama dengan berbagai stakeholder dalam bidang pendidikan, penelitian dan pengabdian masyarakat khususnya bidang kajian ilmu sosial dan ilmu politik secara efektif, efisien dan berkesinambungan.</li>
+                            <li>Mewujudkan manajemen akademik sekolah tinggi yang mampu meningkatkan kesejahteraan dan kualitas hidup seluruh civitas akademika sekolah tinggi.</li>
+                        </ol>
                     </div>
                 </div>
-                <div class="md:col-span-7 md:pl-8">
-                    <h2 class="font-headline-md text-headline-md text-primary mb-6 flex items-center gap-2">
-                        <span class="material-symbols-outlined text-secondary"
-                            data-icon="history_edu">history_edu</span>
-                        Sejarah Singkat STISIP Bina Generasi
-                    </h2>
-                    <div class="space-y-4 font-body-md text-body-md text-on-surface-variant">
-                        <p>Sekolah Tinggi Ilmu Sosial dan Ilmu Politik (STISIP) Bina Generasi Polewali didirikan pada
-                            tahun 1998 sebagai wujud komitmen terhadap peningkatan kualitas sumber daya manusia di
-                            bidang ilmu sosial dan politik di Sulawesi Barat.</p>
-                        <p>STISIP Bina Generasi Polewali menyelenggarakan dua Program Studi unggulan terakreditasi
-                            BAN-PT, yaitu S1 Ilmu Administrasi Negara dan S1 Ilmu Pemerintahan, untuk menjawab kebutuhan
-                            aparatur pemerintahan dan profesional publik yang kompeten.</p>
-                        <p>Berlokasi di Jl. Mr. Muh. Yamin No. 195, Manding, Polewali Mandar, STISIP Bina Generasi terus
-                            berkembang menjadi kampus unggulan yang berintegritas dan siap mencetak lulusan berdaya
-                            saing tinggi.</p>
+
+                <!-- Program Studi Administrasi Negara -->
+                <div class="bg-surface rounded-2xl shadow-sm border border-outline-variant p-8 md:p-12 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-secondary/5 rounded-bl-[100px] -z-10"></div>
+                    <div class="flex items-center gap-4 mb-8 border-b border-outline-variant pb-4">
+                        <span class="material-symbols-outlined text-[40px] text-primary">public</span>
+                        <h2 class="font-headline-md text-[24px] md:text-[32px] text-primary">Program Studi Ilmu Administrasi Negara (S1)</h2>
+                    </div>
+
+                    <div class="mb-8">
+                        <h3 class="font-label-md text-[16px] text-secondary font-bold uppercase tracking-wider mb-4">Visi Program Studi</h3>
+                        <p class="font-display-lg text-[20px] md:text-[24px] leading-relaxed text-on-surface-variant italic border-l-4 border-secondary pl-6">
+                            "Menjadikan Program Studi Ilmu Administrasi Negara Sebagai Pusat Pengembangan Dan Pengkajian Kebijakan Ilmu Administrasi Negara Di Provinsi Sulawesi Barat Yang Handal Dan Profesional Pada Tahun 2037."
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3 class="font-label-md text-[16px] text-secondary font-bold uppercase tracking-wider mb-4">Misi Program Studi</h3>
+                        <ol class="list-decimal pl-5 space-y-3 font-body-md text-on-surface-variant">
+                            <li>Menciptakan sarjana Ilmu Administrasi Negara yang berbasis nilai-nilai malaqbiq dan berkarakter bangsa.</li>
+                            <li>Menciptakan sarjana Ilmu Administrasi Negara yang memiliki kemampuan pada bidang birokrasi pemerintah maupun swasta yang berpijak pada perkembangan zaman.</li>
+                            <li>Menciptakan sarjana Ilmu Administrasi Negara yang mampu mengembangkan dan menerapkan konsep-konsep administrasi negara yang profesional.</li>
+                            <li>Mahirkan calon sarjana ilmu administrasi Negara yang mampu mengetahui, memahami, menerapkan, mensintesis, dan mengevaluasi aspek-aspek administrasi Negara.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- Program Studi Ilmu Pemerintahan -->
+                <div class="bg-surface rounded-2xl shadow-sm border border-outline-variant p-8 md:p-12 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-secondary/5 rounded-bl-[100px] -z-10"></div>
+                    <div class="flex items-center gap-4 mb-8 border-b border-outline-variant pb-4">
+                        <span class="material-symbols-outlined text-[40px] text-primary">gavel</span>
+                        <h2 class="font-headline-md text-[24px] md:text-[32px] text-primary">Program Studi Ilmu Pemerintahan (S1)</h2>
+                    </div>
+
+                    <div class="mb-8">
+                        <h3 class="font-label-md text-[16px] text-secondary font-bold uppercase tracking-wider mb-4">Visi Program Studi</h3>
+                        <p class="font-display-lg text-[20px] md:text-[24px] leading-relaxed text-on-surface-variant italic border-l-4 border-secondary pl-6">
+                            "Menjadikan Program Studi Ilmu Pemerintahan Yang Terpercaya Untuk Menghasilkan Sumber Daya Manusia Yang Dapat Diidentifikasi Sebagai Insan Penyelenggara Pemerintahan Yang Cerdas, Inovatif, Jujur, Bertanggung Jawab, Dan Berdaya Saing Tinggi Serta Memiliki Wawasan Kebangsaan Yang Luas Pada Tahun 2037."
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3 class="font-label-md text-[16px] text-secondary font-bold uppercase tracking-wider mb-4">Misi Program Studi</h3>
+                        <ol class="list-decimal pl-5 space-y-3 font-body-md text-on-surface-variant">
+                            <li>Menciptakan suasana proses perkuliahan yang kondusif demi tercapainya kualitas hasil belajar dan lulusan yang siap pakai.</li>
+                            <li>Melakukan berbagai riset yang inovatif dalam meningkatkan perolehan prestasi akademik dan non-akademik.</li>
+                            <li>Meningkatkan kualitas alumni yang berdaya saing tinggi sebagai penyelenggara pemerintahan maupun non-pemerintahan.</li>
+                            <li>Menjalin kerja sama dengan pemerintah dalam hal pemberdayaan masyarakat.</li>
+                        </ol>
                     </div>
                 </div>
             </div>
         </section>
     </main>
+
     <!-- Footer -->
-    <!-- Footer (Shared Component) -->
     <footer aria-label="Site Footer"
         class="bg-primary text-on-primary w-full py-section-padding-desktop px-gutter max-w-container-max mx-auto border-t border-outline-variant full-width bottom-0 mt-20"
         style="background: linear-gradient(180deg, #001026 0%, #000817 100%);">

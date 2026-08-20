@@ -33,7 +33,13 @@
             </a>
             <nav aria-label="Desktop Navigation" class="hidden md:flex items-center gap-7">
                 <a class="nav-link-custom" href="index.html">Beranda</a>
-                <a class="nav-link-custom" href="profil.html">Profil Kampus</a>
+                <div class="dropdown-container">
+                    <a class="nav-link-custom cursor-pointer flex items-center gap-1" href="#">Profil Kampus <span class="material-symbols-outlined text-[16px]">arrow_drop_down</span></a>
+                    <div class="dropdown-menu-custom">
+                        <a href="profil.html">Sejarah Singkat</a>
+                        <a href="visimisi.html">Visi & Misi</a>
+                    </div>
+                </div>
                 <a class="nav-link-custom active" href="program-studi.html">Program Studi</a>
 
                 <a class="nav-link-custom" href="portal-layanan.html">Portal Layanan</a>
@@ -72,8 +78,18 @@
             <nav class="flex flex-col gap-4 mt-2">
                 <a class="font-label-md text-label-md py-2 border-b border-on-primary/10 transition-colors hover:text-secondary"
                     href="index.html">Beranda</a>
-                <a class="font-label-md text-label-md py-2 border-b border-on-primary/10 transition-colors hover:text-secondary"
-                    href="profil.html">Profil Kampus</a>
+                <details class="group border-b border-on-primary/10 pb-2">
+                    <summary class="font-label-md text-label-md py-2 transition-colors hover:text-secondary cursor-pointer flex justify-between items-center text-on-primary">
+                        Profil Kampus
+                        <span class="material-symbols-outlined text-[20px] transition-transform group-open:rotate-180">arrow_drop_down</span>
+                    </summary>
+                    <div class="flex flex-col gap-2 pt-1 pb-1">
+                        <a class="font-label-md text-label-md pl-4 transition-colors hover:text-secondary text-on-primary/80"
+                            href="profil.html">Sejarah Singkat</a>
+                        <a class="font-label-md text-label-md pl-4 transition-colors hover:text-secondary text-on-primary/80"
+                            href="visimisi.html">Visi & Misi</a>
+                    </div>
+                </details>
                 <a class="font-label-md text-label-md py-2 border-b border-on-primary/10 transition-colors text-secondary font-bold"
                     href="program-studi.html">Program Studi</a>
 
